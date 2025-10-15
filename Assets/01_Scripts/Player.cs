@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     public float dashCooldown = 1f;
     private bool canDash = true;
     private bool isDashing = false;
-    private float lastDirection = 1f; // guarda la última dirección válida
+    private float lastDirection = 1f; 
     public GameObject DashEffect;
 
     void Start()
@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
 
     void Movement()
     {
-        if (isDashing) return; // no se mueve durante dash
+        if (isDashing) return; 
 
         float x = Input.GetAxis("Horizontal");
 
@@ -55,19 +55,19 @@ public class Player : MonoBehaviour
 
         rb.velocity = new Vector2(x * currentSpeed, rb.velocity.y);
 
-        // actualizar dirección y flip visual
+        
         if (x > 0.1f)
         {
             lastDirection = 1f;
             Vector3 scale = transform.localScale;
-            scale.x = Mathf.Abs(scale.x); // asegura que el tamaño en X sea positivo
+            scale.x = Mathf.Abs(scale.x); 
             transform.localScale = scale;
         }
         else if (x < -0.1f)
         {
             lastDirection = -1f;
             Vector3 scale = transform.localScale;
-            scale.x = -Mathf.Abs(scale.x); // invierte el signo de X, sin tocar Y ni Z
+            scale.x = -Mathf.Abs(scale.x); 
             transform.localScale = scale;
         }
     }
@@ -119,22 +119,22 @@ public class Player : MonoBehaviour
         if (sr != null) sr.enabled = false;
         Instantiate(DashEffect, transform.position, transform.rotation);
 
-        // Detectar obstáculos delante
+        
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * dashDirection, dashDistance, LayerMask.GetMask("Ground"));
 
         Vector2 targetPos;
         if (hit.collider != null)
         {
-            // Si hay obstáculo, quedarte justo antes de él
+            
             targetPos = hit.point - (Vector2.right * dashDirection * 0.2f);
         }
         else
         {
-            // Si no hay nada, hacer el dash completo
+            
             targetPos = new Vector2(transform.position.x + dashDistance * dashDirection, transform.position.y);
         }
 
-        // Teletransportar
+        
         rb.position = targetPos;
 
         yield return new WaitForSeconds(0.1f);
