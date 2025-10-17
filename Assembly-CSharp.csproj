@@ -57,10 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\01_Scripts\Lightning.cs" />
-    <Compile Include="Assets\01_Scripts\ElectricLine.cs" />
-    <Compile Include="Assets\01_Scripts\Player.cs" />
-    <Compile Include="Assets\01_Scripts\UIAudioManager.cs" />
     <Compile Include="Assets\01_Scripts\MenuController.cs" />
+    <Compile Include="Assets\01_Scripts\ElectricLine.cs" />
+    <Compile Include="Assets\01_Scripts\UIAudioManager.cs" />
+    <Compile Include="Assets\01_Scripts\Player.cs" />
+    <Compile Include="Assets\01_Scripts\StartPoint.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    [Header("Movimiento Básico")]
     public float moveSpeed = 6f;
     public float jumpForce = 6f;
     public float runningSpeed = 10f;
@@ -12,6 +13,8 @@ public class Player : MonoBehaviour
     public bool isRunning = false;
     float currentSpeed;
     public bool canJump = true;
+
+    [Header("Vida y Checkpoint")]
     public int life = 5;
     public bool BossFight = false;
     public Transform startPoint;
@@ -21,20 +24,36 @@ public class Player : MonoBehaviour
     public float dashCooldown = 1f;
     private bool canDash = true;
     private bool isDashing = false;
-    private float lastDirection = 1f; 
+    private float lastDirection = 1f;
     public GameObject DashEffect;
+
+    [Header("Escalera")]
+    public bool isClimbing = false;
+    private float verticalInput;
+    private float originalGravity;
 
     void Start()
     {
-
+        originalGravity = rb.gravityScale;
     }
 
     void Update()
     {
-        Movement();
-        Jump();
+        // Si está haciendo dash, no permitir movimiento ni salto
+        if (isDashing) return;
 
-        if (Input.GetKeyDown(KeyCode.E) && canDash)
+        if (isClimbing)
+        {
+            Climb();
+        }
+        else
+        {
+            Movement();
+            Jump();
+        }
+
+        // Dash (E)
+        if (Input.GetKeyDown(KeyCode.E) && canDash && !isClimbing)
         {
             StartCoroutine(Dash());
         }
@@ -42,49 +61,28 @@ public class Player : MonoBehaviour
 
     void Movement()
     {
-        if (isDashing) return; 
-
         float x = Input.GetAxis("Horizontal");
 
-        if (Input.GetKey(KeyCode.LeftShift))
-            isRunning = true;
-        else
-            isRunning = false;
-
+        // Correr
+        isRunning = Input.GetKey(KeyCode.LeftShift);
         currentSpeed = isRunning ? runningSpeed : moveSpeed;
 
         rb.velocity = new Vector2(x * currentSpeed, rb.velocity.y);
 
-        
+        // Girar el sprite según dirección
         if (x > 0.1f)
         {
             lastDirection = 1f;
             Vector3 scale = transform.localScale;
-            scale.x = Mathf.Abs(scale.x); 
+            scale.x = Mathf.Abs(scale.x);
             transform.localScale = scale;
         }
         else if (x < -0.1f)
         {
             lastDirection = -1f;
             Vector3 scale = transform.localScale;
-            scale.x = -Mathf.Abs(scale.x); 
+            scale.x = -Mathf.Abs(scale.x);
             transform.localScale = scale;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-        {
-            canJump = true;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-        {
-            canJump = false;
         }
     }
 
@@ -96,6 +94,47 @@ public class Player : MonoBehaviour
         }
     }
 
+    void Climb()
+    {
+        verticalInput = Input.GetAxis("Vertical");
+        rb.velocity = new Vector2(0, verticalInput * moveSpeed / 1.5f);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            canJump = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            canJump = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ladder"))
+        {
+            isClimbing = true;
+            rb.gravityScale = 0;
+            rb.velocity = Vector2.zero;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Ladder"))
+        {
+            isClimbing = false;
+            rb.gravityScale = originalGravity;
+        }
+    }
+
     public void TakeDamage(int damage)
     {
         life -= damage;
@@ -104,11 +143,13 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+
         if (!BossFight)
         {
             transform.position = startPoint.position;
         }
     }
+
     IEnumerator Dash()
     {
         canDash = false;
@@ -119,22 +160,19 @@ public class Player : MonoBehaviour
         if (sr != null) sr.enabled = false;
         Instantiate(DashEffect, transform.position, transform.rotation);
 
-        
+        // Detección de obstáculos
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * dashDirection, dashDistance, LayerMask.GetMask("Ground"));
 
         Vector2 targetPos;
         if (hit.collider != null)
         {
-            
             targetPos = hit.point - (Vector2.right * dashDirection * 0.2f);
         }
         else
         {
-            
             targetPos = new Vector2(transform.position.x + dashDistance * dashDirection, transform.position.y);
         }
 
-        
         rb.position = targetPos;
 
         yield return new WaitForSeconds(0.1f);
@@ -145,5 +183,4 @@ public class Player : MonoBehaviour
         canDash = true;
         isDashing = false;
     }
-
 }
