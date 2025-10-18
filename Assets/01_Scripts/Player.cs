@@ -1,11 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    [Header("Movimiento B�sico")]
+    [Header("Movimiento Básico")]
     public float moveSpeed = 6f;
     public float jumpForce = 6f;
     public float runningSpeed = 10f;
@@ -32,15 +32,25 @@ public class Player : MonoBehaviour
     private float verticalInput;
     private float originalGravity;
 
+    [Header("Ataque")]
+    public bool isAttacking = false;
+    public float attackDuration = 0.5f;   // Duración del ataque
+    public GameObject attackSmokeEffect;  // Prefab del efecto de humo (opcional)
+
+    [Header("Animación")]
+    public Animator animator;
+
     void Start()
     {
         originalGravity = rb.gravityScale;
+        canJump = true; // 🔥 asegura que empiece en el suelo
+        animator.SetBool("isGrounded", true);
     }
 
     void Update()
     {
-        // Si est� haciendo dash, no permitir movimiento ni salto
-        if (isDashing) return;
+        // Evitar movimiento mientras hace Dash o Attack
+        if (isDashing || isAttacking) return;
 
         if (isClimbing)
         {
@@ -57,6 +67,14 @@ public class Player : MonoBehaviour
         {
             StartCoroutine(Dash());
         }
+
+        // Ataque (Click Izquierdo o tecla J)
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.J)) && !isAttacking)
+        {
+            StartCoroutine(Attack());
+        }
+
+        UpdateAnimatorParameters();
     }
 
     void Movement()
@@ -69,7 +87,7 @@ public class Player : MonoBehaviour
 
         rb.velocity = new Vector2(x * currentSpeed, rb.velocity.y);
 
-        // Girar el sprite seg�n direcci�n
+        // Girar sprite según dirección
         if (x > 0.1f)
         {
             lastDirection = 1f;
@@ -88,10 +106,32 @@ public class Player : MonoBehaviour
 
     void Jump()
     {
-        if (canJump && Input.GetKey(KeyCode.Space))
+        // 🔥 sin trigger — solo cambia flags
+        if (canJump && Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            canJump = false;
+            animator.SetBool("isJumping", true);
+            animator.SetBool("isGrounded", false);
         }
+    }
+
+    IEnumerator Attack()
+    {
+        isAttacking = true;
+        animator.SetBool("isAttacking", true);
+
+        // Instancia efecto de humo si existe
+        if (attackSmokeEffect != null)
+        {
+            Instantiate(attackSmokeEffect, transform.position, Quaternion.identity);
+        }
+
+        // Espera la duración del ataque
+        yield return new WaitForSeconds(attackDuration);
+
+        isAttacking = false;
+        animator.SetBool("isAttacking", false);
     }
 
     void Climb()
@@ -105,6 +145,9 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             canJump = true;
+            animator.SetBool("isGrounded", true);
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", false);
         }
     }
 
@@ -113,6 +156,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             canJump = false;
+            animator.SetBool("isGrounded", false);
         }
     }
 
@@ -160,7 +204,7 @@ public class Player : MonoBehaviour
         if (sr != null) sr.enabled = false;
         Instantiate(DashEffect, transform.position, transform.rotation);
 
-        // Detecci�n de obst�culos
+        // Detección de obstáculos
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * dashDirection, dashDistance, LayerMask.GetMask("Ground"));
 
         Vector2 targetPos;
@@ -182,5 +226,21 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
         isDashing = false;
+    }
+
+    // 🔥 Actualización completa del Animator
+    void UpdateAnimatorParameters()
+    {
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));   // Movimiento horizontal
+        animator.SetFloat("yVelocity", rb.velocity.y);          // Velocidad vertical
+
+        bool isFalling = rb.velocity.y < -0.1f && !canJump;
+        bool isJumpingNow = rb.velocity.y > 0.1f && !canJump;
+
+        animator.SetBool("isJumping", isJumpingNow);
+        animator.SetBool("isFalling", isFalling);
+        animator.SetBool("isGrounded", canJump);
+        animator.SetBool("isClimbing", isClimbing);
+        animator.SetBool("isAttacking", isAttacking);
     }
 }

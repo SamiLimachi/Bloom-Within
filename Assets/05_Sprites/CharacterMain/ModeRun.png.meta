@@ -6,8 +6,14 @@ TextureImporter:
       213: -4354073453309994055
     second: ModeRun_0
   - first:
+      213: 2385757085914406263
+    second: ModeRun_1
+  - first:
       213: -3332119144955713151
     second: ModeRun_2
+  - first:
+      213: 927721859244689143
+    second: ModeRun_3
   - first:
       213: -8410797856968346965
     second: ModeRun_4
@@ -23,15 +29,6 @@ TextureImporter:
   - first:
       213: -8738765798967018748
     second: ModeRun_8
-  - first:
-      213: 6614362739771990687
-    second: ModeRun_9
-  - first:
-      213: -597851827162532746
-    second: ModeRun_10
-  - first:
-      213: -6989383501140921313
-    second: ModeRun_12
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -125,10 +122,10 @@ TextureImporter:
       name: ModeRun_0
       rect:
         serializedVersion: 2
-        x: 91
-        y: 573
-        width: 94
-        height: 129
+        x: 103
+        y: 580
+        width: 71
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,13 +140,34 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: ModeRun_1
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 581
+        width: 86
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d9c4aed69eb1120800000000000000
+      internalID: 2385757085914406263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: ModeRun_2
       rect:
         serializedVersion: 2
-        x: 338
-        y: 573
-        width: 104
-        height: 134
+        x: 612
+        y: 583
+        width: 83
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,13 +182,34 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: ModeRun_3
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 326
+        width: 90
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f605ae9d1eefdc00800000000000000
+      internalID: 927721859244689143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: ModeRun_4
       rect:
         serializedVersion: 2
-        x: 599
-        y: 573
-        width: 99
-        height: 132
+        x: 362
+        y: 323
+        width: 69
+        height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,10 +227,10 @@ TextureImporter:
       name: ModeRun_5
       rect:
         serializedVersion: 2
-        x: 699
-        y: 575
-        width: 6
-        height: 6
+        x: 607
+        y: 322
+        width: 97
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,10 +248,10 @@ TextureImporter:
       name: ModeRun_6
       rect:
         serializedVersion: 2
-        x: 94
-        y: 317
-        width: 92
-        height: 134
+        x: 97
+        y: 66
+        width: 89
+        height: 118
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,10 +269,10 @@ TextureImporter:
       name: ModeRun_7
       rect:
         serializedVersion: 2
-        x: 358
-        y: 317
-        width: 76
-        height: 125
+        x: 359
+        y: 68
+        width: 78
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -251,10 +290,10 @@ TextureImporter:
       name: ModeRun_8
       rect:
         serializedVersion: 2
-        x: 595
-        y: 319
-        width: 112
-        height: 130
+        x: 610
+        y: 69
+        width: 87
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,69 +303,6 @@ TextureImporter:
       bones: []
       spriteID: 40bfc394ecaa9b680800000000000000
       internalID: -8738765798967018748
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ModeRun_9
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 61
-        width: 100
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f9260bf0edfeacb50800000000000000
-      internalID: 6614362739771990687
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ModeRun_10
-      rect:
-        serializedVersion: 2
-        x: 326
-        y: 61
-        width: 122
-        height: 129
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 674b8a54ee004b7f0800000000000000
-      internalID: -597851827162532746
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ModeRun_12
-      rect:
-        serializedVersion: 2
-        x: 606
-        y: 61
-        width: 96
-        height: 129
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f14f48facb8b00f90800000000000000
-      internalID: -6989383501140921313
       vertices: []
       indices: 
       edges: []

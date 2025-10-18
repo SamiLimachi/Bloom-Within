@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\BloomWithin\\Bloom-Within\\",
+  "WorkspaceRootPath": "C:\\Bloom-Within\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|d:\\bloomwithin\\bloom-within\\assets\\01_scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|c:\\bloom-within\\assets\\01_scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|d:\\bloomwithin\\bloom-within\\assets\\01_scripts\\startpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|C:\\Bloom-Within\\assets\\01_scripts\\startpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\startpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|d:\\bloomwithin\\bloom-within\\assets\\01_scripts\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|C:\\Bloom-Within\\assets\\01_scripts\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\electricline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|C:\\Bloom-Within\\assets\\01_scripts\\electricline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\electricline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\uiaudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|C:\\Bloom-Within\\assets\\01_scripts\\uiaudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\uiaudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,17 +30,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 293,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Player.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Player.cs",
+              "DocumentMoniker": "C:\\Bloom-Within\\Assets\\01_Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Player.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Player.cs",
+              "ToolTip": "C:\\Bloom-Within\\Assets\\01_Scripts\\Player.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\Player.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAqwKwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAmwPUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-17T13:19:07.388Z",
               "EditorCaption": ""
@@ -49,35 +53,33 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "StartPoint.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\StartPoint.cs",
+              "DocumentMoniker": "C:\\Bloom-Within\\Assets\\01_Scripts\\StartPoint.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\StartPoint.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\StartPoint.cs",
+              "ToolTip": "C:\\Bloom-Within\\Assets\\01_Scripts\\StartPoint.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\StartPoint.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T13:18:56.947Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-17T13:18:56.947Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "MenuController.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\MenuController.cs",
+              "DocumentMoniker": "C:\\Bloom-Within\\Assets\\01_Scripts\\MenuController.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\MenuController.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\MenuController.cs",
+              "ToolTip": "C:\\Bloom-Within\\Assets\\01_Scripts\\MenuController.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\MenuController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T05:59:43.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-17T05:59:43.721Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "UIAudioManager.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\UIAudioManager.cs",
+              "DocumentMoniker": "C:\\Bloom-Within\\Assets\\01_Scripts\\UIAudioManager.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\UIAudioManager.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\UIAudioManager.cs",
+              "ToolTip": "C:\\Bloom-Within\\Assets\\01_Scripts\\UIAudioManager.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\UIAudioManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -87,13 +89,47 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "ElectricLine.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\ElectricLine.cs",
+              "DocumentMoniker": "C:\\Bloom-Within\\Assets\\01_Scripts\\ElectricLine.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\ElectricLine.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\ElectricLine.cs",
+              "ToolTip": "C:\\Bloom-Within\\Assets\\01_Scripts\\ElectricLine.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\ElectricLine.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAuwBYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-15T22:57:35.686Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 136,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 136,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 329,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             }
           ]
         }
