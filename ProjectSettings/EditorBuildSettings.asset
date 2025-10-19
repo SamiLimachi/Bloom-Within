@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00_Scenes/GradleBox.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/00_Scenes/Base.unity
+    guid: d6ab3493640c59a48a4abcca055de633
   m_configObjects: {}

@@ -8,7 +8,6 @@ public class ElectricLine : MonoBehaviour
     public int segments = 10;          // cantidad de puntos entre A y B
     public float noiseAmount = 0.05f;  // cuánto tiembla el rayo
     public float noiseSpeed = 10f;     // velocidad de movimiento
-
     private LineRenderer lr;
     private Vector3[] points;
 

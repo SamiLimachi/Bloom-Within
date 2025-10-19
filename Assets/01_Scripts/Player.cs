@@ -13,6 +13,15 @@ public class Player : MonoBehaviour
     public bool isRunning = false;
     float currentSpeed;
     public bool canJump = true;
+    public AudioClip walkingSound;
+    public AudioClip jumpingSound;
+    private float footstepTimer = 0f;
+    public float footstepInterval = 0.4f; // tiempo entre sonidos de pasos
+
+    [Header("Detección de Suelo")]
+    public Transform groundCheck;
+    public float groundRadius = 0.2f;
+    public LayerMask groundLayer;
 
     [Header("Vida y Checkpoint")]
     public int life = 5;
@@ -20,22 +29,26 @@ public class Player : MonoBehaviour
     public Transform startPoint;
 
     [Header("Dash / Teletransporte")]
+    public bool isDashUnlocked=false;
     public float dashDistance = 0.2f;
     public float dashCooldown = 1f;
     private bool canDash = true;
     private bool isDashing = false;
     private float lastDirection = 1f;
     public GameObject DashEffect;
+    public AudioClip dashSound;
 
     [Header("Escalera")]
     public bool isClimbing = false;
     private float verticalInput;
     private float originalGravity;
+    private float climbStepTimer = 0f;
+    public float climbStepInterval = 0.45f; // tiempo entre sonidos al trepar
 
     [Header("Ataque")]
     public bool isAttacking = false;
-    public float attackDuration = 0.5f;   // Duración del ataque
-    public GameObject attackSmokeEffect;  // Prefab del efecto de humo (opcional)
+    public float attackDuration = 0.5f;
+    public GameObject attackSmokeEffect;
 
     [Header("Animación")]
     public Animator animator;
@@ -43,45 +56,48 @@ public class Player : MonoBehaviour
     void Start()
     {
         originalGravity = rb.gravityScale;
-        canJump = true; // 🔥 asegura que empiece en el suelo
-        animator.SetBool("isGrounded", true);
+        canJump = true;
     }
 
     void Update()
     {
-        // Evitar movimiento mientras hace Dash o Attack
         if (isDashing || isAttacking) return;
 
+        CheckGrounded(); // 🔥 Actualiza canJump cada frame
+
         if (isClimbing)
-        {
             Climb();
-        }
         else
         {
             Movement();
             Jump();
         }
 
-        // Dash (E)
-        if (Input.GetKeyDown(KeyCode.E) && canDash && !isClimbing)
-        {
+        if (Input.GetKeyDown(KeyCode.E) && canDash && !isClimbing && isDashUnlocked)
             StartCoroutine(Dash());
-        }
 
-        // Ataque (Click Izquierdo o tecla J)
         if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.J)) && !isAttacking)
-        {
             StartCoroutine(Attack());
-        }
 
         UpdateAnimatorParameters();
     }
 
+    void CheckGrounded()
+    {
+        // 🔥 Detecta si hay suelo justo debajo del jugador
+        canJump = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
+
+        animator.SetBool("isGrounded", canJump);
+        if (canJump)
+        {
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isFalling", false);
+        }
+    }
+
     void Movement()
     {
-        float x = Input.GetAxis("Horizontal");
-
-        // Correr
+        float x = Input.GetAxisRaw("Horizontal"); // 🔥 RAW detecta input directo, no arrastre físico
         isRunning = Input.GetKey(KeyCode.LeftShift);
         currentSpeed = isRunning ? runningSpeed : moveSpeed;
 
@@ -91,28 +107,41 @@ public class Player : MonoBehaviour
         if (x > 0.1f)
         {
             lastDirection = 1f;
-            Vector3 scale = transform.localScale;
-            scale.x = Mathf.Abs(scale.x);
-            transform.localScale = scale;
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
         else if (x < -0.1f)
         {
             lastDirection = -1f;
-            Vector3 scale = transform.localScale;
-            scale.x = -Mathf.Abs(scale.x);
-            transform.localScale = scale;
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+
+        // --- 🎧 Control de sonido de pasos ---
+        bool isMovingByInput = Mathf.Abs(x) > 0.1f; // solo si hay input real
+        if (isMovingByInput && canJump && !isClimbing)
+        {
+            footstepTimer -= Time.deltaTime;
+            if (footstepTimer <= 0f)
+            {
+                UIAudioManager.Instance.PlaySFX(walkingSound, 0.3f);
+
+                footstepTimer = isRunning ? footstepInterval * 0.7f : footstepInterval; // pasos más rápidos al correr
+            }
+        }
+        else
+        {
+            footstepTimer = 0f; // resetea el temporizador al quedarse quieto
         }
     }
 
     void Jump()
     {
-        // 🔥 sin trigger — solo cambia flags
         if (canJump && Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             canJump = false;
             animator.SetBool("isJumping", true);
             animator.SetBool("isGrounded", false);
+            UIAudioManager.Instance.PlaySFX(jumpingSound);
         }
     }
 
@@ -121,44 +150,39 @@ public class Player : MonoBehaviour
         isAttacking = true;
         animator.SetBool("isAttacking", true);
 
-        // Instancia efecto de humo si existe
         if (attackSmokeEffect != null)
-        {
             Instantiate(attackSmokeEffect, transform.position, Quaternion.identity);
-        }
 
-        // Espera la duración del ataque
         yield return new WaitForSeconds(attackDuration);
 
         isAttacking = false;
         animator.SetBool("isAttacking", false);
     }
 
+    
+
     void Climb()
     {
-        verticalInput = Input.GetAxis("Vertical");
+        verticalInput = Input.GetAxisRaw("Vertical"); // input directo
         rb.velocity = new Vector2(0, verticalInput * moveSpeed / 1.5f);
-    }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
+        // --- 🔊 sonido de escalada ---
+        bool isClimbingByInput = Mathf.Abs(verticalInput) > 0.1f; // solo si se mueve realmente
+        if (isClimbingByInput)
         {
-            canJump = true;
-            animator.SetBool("isGrounded", true);
-            animator.SetBool("isJumping", false);
-            animator.SetBool("isFalling", false);
+            climbStepTimer -= Time.deltaTime;
+            if (climbStepTimer <= 0f)
+            {
+                UIAudioManager.Instance.PlaySFX(walkingSound, 0.3f); // 🔥 mismo clip, recortado
+                climbStepTimer = climbStepInterval;
+            }
+        }
+        else
+        {
+            climbStepTimer = 0f; // resetea cuando se detiene
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            canJump = false;
-            animator.SetBool("isGrounded", false);
-        }
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -182,16 +206,29 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         life -= damage;
+
         if (life <= 0)
         {
             Destroy(gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            return;
         }
 
         if (!BossFight)
         {
+            // 🔥 Reinicia posición y fuerza de movimiento
+            rb.velocity = Vector2.zero;
             transform.position = startPoint.position;
+
+            // Espera 1 frame para actualizar físicas
+            StartCoroutine(ForceGroundDetection());
         }
+    }
+
+    private IEnumerator ForceGroundDetection()
+    {
+        yield return new WaitForFixedUpdate();
+        CheckGrounded();
     }
 
     IEnumerator Dash()
@@ -204,21 +241,13 @@ public class Player : MonoBehaviour
         if (sr != null) sr.enabled = false;
         Instantiate(DashEffect, transform.position, transform.rotation);
 
-        // Detección de obstáculos
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * dashDirection, dashDistance, LayerMask.GetMask("Ground"));
-
-        Vector2 targetPos;
-        if (hit.collider != null)
-        {
-            targetPos = hit.point - (Vector2.right * dashDirection * 0.2f);
-        }
-        else
-        {
-            targetPos = new Vector2(transform.position.x + dashDistance * dashDirection, transform.position.y);
-        }
+        Vector2 targetPos = hit.collider != null
+            ? hit.point - (Vector2.right * dashDirection * 0.2f)
+            : new Vector2(transform.position.x + dashDistance * dashDirection, transform.position.y);
 
         rb.position = targetPos;
-
+        UIAudioManager.Instance.PlaySFX(dashSound);
         yield return new WaitForSeconds(0.1f);
         Instantiate(DashEffect, transform.position, transform.rotation);
         if (sr != null) sr.enabled = true;
@@ -228,19 +257,30 @@ public class Player : MonoBehaviour
         isDashing = false;
     }
 
-    // 🔥 Actualización completa del Animator
     void UpdateAnimatorParameters()
     {
-        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));   // Movimiento horizontal
-        animator.SetFloat("yVelocity", rb.velocity.y);          // Velocidad vertical
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        animator.SetFloat("yVelocity", rb.velocity.y);
 
         bool isFalling = rb.velocity.y < -0.1f && !canJump;
         bool isJumpingNow = rb.velocity.y > 0.1f && !canJump;
 
         animator.SetBool("isJumping", isJumpingNow);
         animator.SetBool("isFalling", isFalling);
-        animator.SetBool("isGrounded", canJump);
         animator.SetBool("isClimbing", isClimbing);
         animator.SetBool("isAttacking", isAttacking);
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (groundCheck != null)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
+        }
+    }
+    public void EnterDoor()
+    {
+        Destroy(gameObject);
     }
 }

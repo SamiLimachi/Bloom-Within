@@ -5,6 +5,7 @@ using UnityEngine;
 public class Lightning : MonoBehaviour
 {
     public int damage = 1;
+    public AudioClip AudioClip;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class Lightning : MonoBehaviour
         {
             Player player = collision.gameObject.GetComponent<Player>();
             player.TakeDamage(damage);
+            UIAudioManager.Instance.PlaySFX(AudioClip);
         }
     }
 
