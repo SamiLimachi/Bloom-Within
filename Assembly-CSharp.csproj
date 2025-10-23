@@ -63,6 +63,9 @@
     <Compile Include="Assets\01_Scripts\UIAudioManager.cs" />
     <Compile Include="Assets\01_Scripts\Door.cs" />
     <Compile Include="Assets\01_Scripts\Player.cs" />
+    <Compile Include="Assets\01_Scripts\Boss.cs" />
+    <Compile Include="Assets\01_Scripts\TheWatcher.cs" />
+    <Compile Include="Assets\01_Scripts\Projectile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
