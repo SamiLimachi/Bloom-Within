@@ -138,8 +138,8 @@ public class TheWatcher : Boss
         {
             // Posición horizontal aleatoria dentro del rango del mapa
             float randomX = Random.Range(-lightningAreaWidth / 2f, lightningAreaWidth / 2f);
-            Vector2 groundPos = new Vector2(randomX, centerPoint.position.y); // base del impacto
-            Vector2 spawnPos = new Vector2(randomX, centerPoint.position.y + lightningYSpawn);
+            Vector2 groundPos = new Vector2(randomX, -3.91f); // base del impacto
+            Vector2 spawnPos = new Vector2(randomX, -3.91f + lightningYSpawn);
 
             // Instancia la sombra (advertencia)
             GameObject warning = Instantiate(lightningWarningPrefab, groundPos, Quaternion.identity);
