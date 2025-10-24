@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "D:\\BloomWithin\\Bloom-Within\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|d:\\bloomwithin\\bloom-within\\assets\\01_scripts\\thewatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\thewatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|d:\\bloomwithin\\bloom-within\\assets\\01_scripts\\warningpulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\warningpulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|d:\\bloomwithin\\bloom-within\\assets\\01_scripts\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|d:\\bloomwithin\\bloom-within\\assets\\01_scripts\\thewatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\thewatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\playerattackarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\playerattackarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,30 +58,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 293,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "WarningPulse.cs",
+              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\WarningPulse.cs",
+              "RelativeDocumentMoniker": "Assets\\01_Scripts\\WarningPulse.cs",
+              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\WarningPulse.cs",
+              "RelativeToolTip": "Assets\\01_Scripts\\WarningPulse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T13:51:28.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlayerAttackArea.cs",
+              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\PlayerAttackArea.cs",
+              "RelativeDocumentMoniker": "Assets\\01_Scripts\\PlayerAttackArea.cs",
+              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\PlayerAttackArea.cs",
+              "RelativeToolTip": "Assets\\01_Scripts\\PlayerAttackArea.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T13:37:16.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Projectile.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Projectile.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Projectile.cs",
               "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Projectile.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\Projectile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T13:42:34.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T13:42:34.217Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TheWatcher.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\TheWatcher.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\TheWatcher.cs",
               "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\TheWatcher.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\TheWatcher.cs",
-              "ViewState": "AgIAAK0AAAAAAAAAAAAwwMkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAKkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-22T13:06:36.299Z",
               "EditorCaption": ""
@@ -86,13 +118,13 @@
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Boss.cs",
               "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Boss.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\Boss.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAwwCsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-22T13:01:47.186Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Door.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Door.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Door.cs",
@@ -104,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Lightning.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Lightning.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Lightning.cs",
@@ -116,19 +148,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Player.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Player.cs",
               "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Player.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\Player.cs",
-              "ViewState": "AgIAAAUBAAAAAAAAAAAiwB4BAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAANUAAAAAAAAAAAAiwB4BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-17T13:19:07.388Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "StartPoint.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\StartPoint.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\StartPoint.cs",
@@ -140,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "MenuController.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\MenuController.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\MenuController.cs",
@@ -152,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "UIAudioManager.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\UIAudioManager.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\UIAudioManager.cs",
@@ -164,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "ElectricLine.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\ElectricLine.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\ElectricLine.cs",

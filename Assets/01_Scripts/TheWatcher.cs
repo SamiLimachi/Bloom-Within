@@ -21,15 +21,33 @@ public class TheWatcher : Boss
     private bool canAttack = true;
     private Transform player;
 
+    [Header("Ataque Final - Rayos del Cielo")]
+    public GameObject lightningWarningPrefab;   // Prefab de la sombra o marca de impacto
+    public GameObject lightningStrikePrefab;    // Prefab del rayo real
+    public int lightningCount = 10;             // Cantidad de rayos
+    public float lightningDelay = 0.8f;         // Tiempo entre cada rayo
+    public float warningTime = 1f;              // Tiempo que la sombra dura antes de caer
+    public float lightningAreaWidth = 16f;      // Ancho del mapa donde pueden caer los rayos
+    public float lightningYSpawn = 10f;         // Altura desde donde caen
 
     void Start()
     {
         Life = 100;
         target = EndPoint;
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
-        if (healthBar != null)
-            healthBar.SetMaxHealth(Life);
+        if (Life <= 50)
+        {
+            timeBetweenAttacks = 1.5f;
+            MoveSpeed = 3f;
+        }
+        else if (Life <= 30)
+        {
+            timeBetweenAttacks = 1f;
+            MoveSpeed = 3.5f;
+        }
+            if (healthBar != null)
+                healthBar.SetMaxHealth(Life);
+       
     }
     void Update()
     {
@@ -70,8 +88,20 @@ public class TheWatcher : Boss
     {
         canAttack = false;
 
-        int randomAttack = Random.Range(0, 3);
+        // 🔥 Si está en fase final, tiene chance de usar el nuevo ataque
+        if (Life <= 30)
+        {
+            int specialChance = Random.Range(0, 4); // 1 de 4 chance de hacer el ataque especial
+            if (specialChance == 0)
+            {
+                yield return StartCoroutine(FinalLightningStorm());
+                yield return new WaitForSeconds(timeBetweenAttacks);
+                canAttack = true;
+                yield break; // corta aquí para no ejecutar los ataques normales
+            }
+        }
 
+        int randomAttack = Random.Range(0, 3);
         switch (randomAttack)
         {
             case 0:
@@ -85,14 +115,59 @@ public class TheWatcher : Boss
                 break;
         }
 
-        // ✅ Ahora el movimiento se reanuda inmediatamente
         canMove = true;
-
-        // 🔹 Espera breve antes del próximo ataque (sin detener movimiento)
         yield return new WaitForSeconds(timeBetweenAttacks);
-
         canAttack = true;
     }
+    // -------------------------------
+    // ATAQUE FINAL: TORMENTA DE RAYOS
+    // -------------------------------
+    IEnumerator FinalLightningStorm()
+    {
+        Debug.Log("⚡ The Watcher desata la tormenta final");
+
+        canMove = false;
+
+        // Teletransportarse a un extremo del mapa
+        Transform teleportTarget = (Random.value < 0.5f) ? StartPoint : EndPoint;
+        transform.position = teleportTarget.position;
+        yield return new WaitForSeconds(0.3f);
+
+        // ⚠️ Invoca rayos aleatorios con advertencia visual
+        for (int i = 0; i < lightningCount; i++)
+        {
+            // Posición horizontal aleatoria dentro del rango del mapa
+            float randomX = Random.Range(-lightningAreaWidth / 2f, lightningAreaWidth / 2f);
+            Vector2 groundPos = new Vector2(randomX, centerPoint.position.y); // base del impacto
+            Vector2 spawnPos = new Vector2(randomX, centerPoint.position.y + lightningYSpawn);
+
+            // Instancia la sombra (advertencia)
+            GameObject warning = Instantiate(lightningWarningPrefab, groundPos, Quaternion.identity);
+            Destroy(warning, warningTime + 0.5f);
+
+            // Espera el tiempo de advertencia y luego lanza el rayo
+            StartCoroutine(SpawnLightningAfterDelay(spawnPos, warningTime));
+
+            yield return new WaitForSeconds(lightningDelay); // tiempo entre rayos
+        }
+
+        yield return new WaitForSeconds(1f);
+        canMove = true;
+    }
+
+    // -------------------------------
+    // Subcorrutina auxiliar: lanza el rayo tras advertencia
+    // -------------------------------
+    IEnumerator SpawnLightningAfterDelay(Vector2 spawnPos, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        GameObject lightning = Instantiate(lightningStrikePrefab, spawnPos, Quaternion.identity);
+        Rigidbody2D rb = lightning.GetComponent<Rigidbody2D>();
+        if (rb != null) rb.velocity = Vector2.down * 15f; // velocidad de caída
+
+        Destroy(lightning, 2f); // se destruye tras impactar
+    }
+
 
     // -------------------------------
     // ATAQUE 1: EXPLOSIÓN RADIAL
@@ -107,7 +182,7 @@ public class TheWatcher : Boss
 
         int numProjectiles = 20;
         float angleStep = 360f / numProjectiles;
-        float shootForce = 7f;
+        float shootForce = 10f;
 
         for (int i = 0; i < numProjectiles; i++)
         {

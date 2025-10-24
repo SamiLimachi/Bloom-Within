@@ -22,5 +22,9 @@ public class PlayerAttackArea : MonoBehaviour
                 Debug.Log($"Golpe al jefe: -{player.attackDamage} HP");
             }
         }
+        else if (collision.CompareTag("Projectile"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }

@@ -14,14 +14,14 @@ public class Projectile : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Player player =other.GetComponent<Player>();
+            player.TakeDamage(damage);
             Debug.Log("Jugador golpeado!");
+            Destroy(gameObject);
             // Aquí podrías llamar a un método de daño del jugador
         }
 
         // Evita colisiones con el jefe o sus partes
-        if (!other.CompareTag("Boss"))
-        {
-            Destroy(gameObject);
-        }
+        
     }
 }
