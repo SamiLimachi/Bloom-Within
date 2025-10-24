@@ -21,13 +21,16 @@ public class TheWatcher : Boss
     private bool canAttack = true;
     private Transform player;
 
+
     void Start()
     {
-        Life = 30;
+        Life = 100;
         target = EndPoint;
         player = GameObject.FindGameObjectWithTag("Player").transform;
-    }
 
+        if (healthBar != null)
+            healthBar.SetMaxHealth(Life);
+    }
     void Update()
     {
         if (canMove)

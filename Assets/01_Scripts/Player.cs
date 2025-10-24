@@ -49,9 +49,17 @@ public class Player : MonoBehaviour
     public bool isAttacking = false;
     public float attackDuration = 0.5f;
     public GameObject attackSmokeEffect;
+    
+    
+    public GameObject attackArea;/// ATAQUE 
+    public int attackDamage = 10;
+
 
     [Header("Animación")]
     public Animator animator;
+
+
+   
 
     void Start()
     {
@@ -147,13 +155,26 @@ public class Player : MonoBehaviour
 
     IEnumerator Attack()
     {
+        //isAttacking = true;
+        //animator.SetBool("isAttacking", true);
+
+        //if (attackSmokeEffect != null)
+        //    Instantiate(attackSmokeEffect, transform.position, Quaternion.identity);
+
+        //yield return new WaitForSeconds(attackDuration);
+
+        //isAttacking = false;
+        //animator.SetBool("isAttacking", false);
+
         isAttacking = true;
         animator.SetBool("isAttacking", true);
 
         if (attackSmokeEffect != null)
             Instantiate(attackSmokeEffect, transform.position, Quaternion.identity);
 
+        attackArea.SetActive(true); // 🔥 activar colisión del ataque
         yield return new WaitForSeconds(attackDuration);
+        attackArea.SetActive(false); // 🔥 desactivar al terminar
 
         isAttacking = false;
         animator.SetBool("isAttacking", false);
