@@ -49,10 +49,11 @@ public class Player : MonoBehaviour
     public bool isAttacking = false;
     public float attackDuration = 0.5f;
     public GameObject attackSmokeEffect;
-    
+    public AudioClip attackSound;
+    public AudioClip damageSound;
     
     public GameObject attackArea;/// ATAQUE 
-    public int attackDamage = 10;
+    public int attackDamage = 5;
 
 
     [Header("Animación")]
@@ -171,7 +172,7 @@ public class Player : MonoBehaviour
 
         if (attackSmokeEffect != null)
             Instantiate(attackSmokeEffect, transform.position, Quaternion.identity);
-
+        UIAudioManager.Instance.PlaySFX(attackSound, 1f);
         attackArea.SetActive(true); // 🔥 activar colisión del ataque
         yield return new WaitForSeconds(attackDuration);
         attackArea.SetActive(false); // 🔥 desactivar al terminar
@@ -227,7 +228,7 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         life -= damage;
-
+        UIAudioManager.Instance.PlaySFX(damageSound, 1f);
         // Si la vida es mayor que 0, solo actualiza corazones
         if (life > 0)
         {

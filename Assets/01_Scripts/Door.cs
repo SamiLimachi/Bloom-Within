@@ -9,13 +9,31 @@ public class Door : MonoBehaviour
     public AudioClip doorClip;
     private Player player;
     public string nextLevel;
-
+    public bool isLokcked=false;
+    private PlayerInventory playerInventory;
+    public int requiredKeyID;
+    public AudioClip doorLocked;
     private void Update()
     {
         // Si el jugador está dentro y presiona Enter
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.Return))
         {
-            ActivateDoor();
+            if (isLokcked) {
+                if (playerInventory != null && playerInventory.HasKey(requiredKeyID))
+                {
+                    Debug.Log("Puerta " + requiredKeyID + " abierta");
+                    ActivateDoor();
+                }
+                else
+                {
+                    UIAudioManager.Instance.PlaySFX(doorLocked, 1f);
+                }
+            }
+            else
+            {
+                ActivateDoor();
+            }
+                
             
         }
     }
@@ -36,6 +54,7 @@ public class Door : MonoBehaviour
             isPlayerInRange = true;
             Debug.Log("Jugador frente a la puerta");
             player=collision.GetComponent<Player>();
+            playerInventory = collision.GetComponent<PlayerInventory>();    
             
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build.Content;
 using UnityEngine;
 
 public class TheWatcher : Boss
@@ -15,7 +16,7 @@ public class TheWatcher : Boss
     public Transform centerPoint;
     public Transform[] firePoints;
     public GameObject projectilePrefab;
-
+    public GameObject dashEffect;
     [Header("Control de Ataques")]
     public float timeBetweenAttacks = 2f;
     private bool canAttack = true;
@@ -32,15 +33,50 @@ public class TheWatcher : Boss
 
     [Header("Animación del jefe")]
     public Animator animator;
+    public AudioClip BossMusic;
+    public AudioClip LightningEffect;
+    public AudioClip ProjectileEffect;
+    public AudioClip tpEffect;
 
     void Start()
     {
-        Life = 100;
+        Life = 150;
         target = EndPoint;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         if (healthBar != null)
             healthBar.SetMaxHealth(Life);
+        AudioSource bossAudio = GetComponent<AudioSource>();
+        if (BossMusic != null && bossAudio != null)
+        {
+            bossAudio.clip = BossMusic;
+            bossAudio.loop = false;
+            bossAudio.Play();
+            StartCoroutine(RestartBossMusic(bossAudio));
+        }
+
     }
+
+    IEnumerator RestartBossMusic(AudioSource audioSource)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(BossMusic.length);
+
+            // 🔹 Si el jefe sigue vivo y el audio se detuvo, volver a reproducir
+            if (Life > 0 && !audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+
+            // 🔹 Si el jefe ya murió, cortar la música
+            if (Life <= 0)
+            {
+                audioSource.Stop();
+                yield break;
+            }
+        }
+    }
+
 
     void Update()
     {
@@ -74,7 +110,7 @@ public class TheWatcher : Boss
     {
         canAttack = false;
 
-        if (Life <= 30)
+        if (Life <= 70)
         {
             int specialChance = Random.Range(0, 4);
             if (specialChance == 0)
@@ -111,9 +147,11 @@ public class TheWatcher : Boss
         canMove = false;
 
         animator.SetTrigger("Trigger_Explosion");
+        Instantiate(dashEffect, transform.position, transform.rotation);
         transform.position = centerPoint.position;
+        UIAudioManager.Instance.PlaySFX(tpEffect, 1f);
         yield return new WaitForSeconds(0.3f);
-
+        Instantiate(dashEffect, transform.position, transform.rotation);
         int numProjectiles = 20;
         float angleStep = 360f / numProjectiles;
         float shootForce = 10f;
@@ -126,6 +164,7 @@ public class TheWatcher : Boss
             Rigidbody2D rb = proj.GetComponent<Rigidbody2D>();
             if (rb != null) rb.velocity = dir * shootForce;
             proj.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
+            UIAudioManager.Instance.PlaySFX(ProjectileEffect, 1f);
         }
 
         yield return new WaitForSeconds(0.6f);
@@ -151,6 +190,7 @@ public class TheWatcher : Boss
                 Rigidbody2D rb = proj.GetComponent<Rigidbody2D>();
                 if (rb != null) rb.velocity = dir * projectileSpeed;
                 proj.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
+                UIAudioManager.Instance.PlaySFX(ProjectileEffect, 1f);
             }
             yield return new WaitForSeconds(burstDelay);
         }
@@ -163,7 +203,10 @@ public class TheWatcher : Boss
         animator.SetTrigger("Trigger_Laser");
 
         Transform attackPoint = (Random.value < 0.5f) ? StartPoint : EndPoint;
+        Instantiate(dashEffect, transform.position, transform.rotation);
         transform.position = attackPoint.position;
+        Instantiate(dashEffect, transform.position, transform.rotation);
+        UIAudioManager.Instance.PlaySFX(tpEffect, 1f);
 
         Vector3 scale = transform.localScale;
         scale.x = (player.position.x > transform.position.x) ? Mathf.Abs(scale.x) : -Mathf.Abs(scale.x);
@@ -176,7 +219,7 @@ public class TheWatcher : Boss
         Rigidbody2D rb = laser.GetComponent<Rigidbody2D>();
         if (rb != null) rb.velocity = dir * 9f;
         laser.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
-
+        UIAudioManager.Instance.PlaySFX(ProjectileEffect, 1f);
         yield return new WaitForSeconds(0.6f);
         canMove = true;
     }
@@ -188,7 +231,10 @@ public class TheWatcher : Boss
         animator.SetTrigger("Trigger_Storm");
 
         Transform teleportTarget = (Random.value < 0.5f) ? StartPoint : EndPoint;
+        Instantiate(dashEffect, transform.position, transform.rotation);
         transform.position = teleportTarget.position;
+        Instantiate(dashEffect, transform.position, transform.rotation);
+        UIAudioManager.Instance.PlaySFX(tpEffect, 1f);
         yield return new WaitForSeconds(0.5f);
 
         for (int i = 0; i < lightningCount; i++)
@@ -210,6 +256,7 @@ public class TheWatcher : Boss
     {
         yield return new WaitForSeconds(delay);
         GameObject lightning = Instantiate(lightningStrikePrefab, spawnPos, Quaternion.identity);
+        UIAudioManager.Instance.PlaySFX(LightningEffect, 1f);
         Rigidbody2D rb = lightning.GetComponent<Rigidbody2D>();
         if (rb != null) rb.velocity = Vector2.down * 15f;
         Destroy(lightning, 2f);
@@ -221,5 +268,11 @@ public class TheWatcher : Boss
         if (animator != null)
             animator.SetTrigger("Trigger_Death");
         base.Die();
+        AudioSource bossAudio = GetComponent<AudioSource>();
+        if (bossAudio != null)
+        {
+            bossAudio.Stop();
+        }
+
     }
 }

@@ -3,36 +3,52 @@
   "WorkspaceRootPath": "D:\\BloomWithin\\Bloom-Within\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\thewatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|d:\\bloomwithin\\bloom-within\\assets\\01_scripts\\thechorus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\thechorus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|d:\\bloomwithin\\bloom-within\\assets\\01_scripts\\thewatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\thewatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|d:\\bloomwithin\\bloom-within\\assets\\01_scripts\\lightningstrike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\lightningstrike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|d:\\bloomwithin\\bloom-within\\assets\\01_scripts\\warningpulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\warningpulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\playerattackarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\playerattackarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\key.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\key.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\playerinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\playerinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\firespitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\firespitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\lightningstrike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\lightningstrike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\warningpulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\warningpulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\uiaudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,11 +78,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 293,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "TheChorus.cs",
+              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\TheChorus.cs",
+              "RelativeDocumentMoniker": "Assets\\01_Scripts\\TheChorus.cs",
+              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\TheChorus.cs",
+              "RelativeToolTip": "Assets\\01_Scripts\\TheChorus.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAwwLIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T21:25:14.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlayerInventory.cs",
+              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\PlayerInventory.cs",
+              "RelativeDocumentMoniker": "Assets\\01_Scripts\\PlayerInventory.cs",
+              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\PlayerInventory.cs",
+              "RelativeToolTip": "Assets\\01_Scripts\\PlayerInventory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T20:46:04.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Key.cs",
+              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Key.cs",
+              "RelativeDocumentMoniker": "Assets\\01_Scripts\\Key.cs",
+              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Key.cs",
+              "RelativeToolTip": "Assets\\01_Scripts\\Key.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T20:44:56.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "LightningStrike.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\LightningStrike.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\LightningStrike.cs",
@@ -74,12 +127,11 @@
               "RelativeToolTip": "Assets\\01_Scripts\\LightningStrike.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T21:50:57.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T21:50:57.261Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "WarningPulse.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\WarningPulse.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\WarningPulse.cs",
@@ -87,24 +139,23 @@
               "RelativeToolTip": "Assets\\01_Scripts\\WarningPulse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-24T13:51:28.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-24T13:51:28.981Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "PlayerAttackArea.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\PlayerAttackArea.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\PlayerAttackArea.cs",
               "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\PlayerAttackArea.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\PlayerAttackArea.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-24T13:37:16.709Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "Projectile.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Projectile.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Projectile.cs",
@@ -116,44 +167,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TheWatcher.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\TheWatcher.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\TheWatcher.cs",
               "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\TheWatcher.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\TheWatcher.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAAAI0AAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAwwBUBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-22T13:06:36.299Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Boss.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Boss.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Boss.cs",
               "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Boss.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\Boss.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAwwCsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-22T13:01:47.186Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "Door.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Door.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Door.cs",
               "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Door.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\Door.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAABBwBsAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAACEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-19T15:53:17.425Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "Lightning.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Lightning.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Lightning.cs",
@@ -165,19 +216,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Player.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Player.cs",
               "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Player.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\Player.cs",
-              "ViewState": "AgIAANUAAAAAAAAAAAAiwB4BAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAAAAMBAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-17T13:19:07.388Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
+              "Title": "FireSpitter.cs",
+              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\FireSpitter.cs",
+              "RelativeDocumentMoniker": "Assets\\01_Scripts\\FireSpitter.cs",
+              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\FireSpitter.cs",
+              "RelativeToolTip": "Assets\\01_Scripts\\FireSpitter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T15:22:25.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "StartPoint.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\StartPoint.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\StartPoint.cs",
@@ -189,7 +252,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "MenuController.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\MenuController.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\MenuController.cs",
@@ -201,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "UIAudioManager.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\UIAudioManager.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\UIAudioManager.cs",
@@ -213,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "ElectricLine.cs",
               "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\ElectricLine.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\ElectricLine.cs",

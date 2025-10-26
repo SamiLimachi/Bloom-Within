@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00_Scenes/Level1.unity
     guid: e698c3a90c009754bae90c7cbf1e05aa
+  - enabled: 1
+    path: Assets/00_Scenes/TheWatcher.unity
+    guid: b63be01846bd74543b6474f7e6b59c31
   m_configObjects: {}
