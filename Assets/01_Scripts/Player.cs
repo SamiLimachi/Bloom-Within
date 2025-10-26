@@ -228,23 +228,19 @@ public class Player : MonoBehaviour
     {
         life -= damage;
 
-        if (life <= 0)
+        // Si la vida es mayor que 0, solo actualiza corazones
+        if (life > 0)
         {
-            Destroy(gameObject);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Debug.Log($"💔 Jugador herido. Vida actual: {life}");
+            // Aquí puedes agregar un pequeño parpadeo o invulnerabilidad temporal
             return;
         }
 
-        if (!BossFight)
-        {
-            // 🔥 Reinicia posición y fuerza de movimiento
-            rb.velocity = Vector2.zero;
-            transform.position = startPoint.position;
-
-            // Espera 1 frame para actualizar físicas
-            StartCoroutine(ForceGroundDetection());
-        }
+        // Si la vida llega a 0, entonces sí reinicia
+        Debug.Log("☠️ Jugador ha muerto.");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
 
     private IEnumerator ForceGroundDetection()
     {

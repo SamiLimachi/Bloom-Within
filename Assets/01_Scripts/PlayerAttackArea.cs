@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,6 +25,14 @@ public class PlayerAttackArea : MonoBehaviour
         else if (collision.CompareTag("Projectile"))
         {
             Destroy(collision.gameObject);
+        }
+        else if (collision.CompareTag("Breakable")) // 💥 nuevo tag para paredes
+        {
+            BreakableWall wall = collision.GetComponent<BreakableWall>();
+            if (wall != null)
+            {
+                wall.TakeHit();
+            }
         }
     }
 }

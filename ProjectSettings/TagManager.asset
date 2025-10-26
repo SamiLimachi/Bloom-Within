@@ -8,6 +8,7 @@ TagManager:
   - Ladder
   - Boss
   - Projectile
+  - Breakable
   layers:
   - Default
   - TransparentFX

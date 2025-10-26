@@ -17,38 +17,31 @@ public class TheWatcher : Boss
     public GameObject projectilePrefab;
 
     [Header("Control de Ataques")]
-    public float timeBetweenAttacks = 2f; // 🔹 Menor tiempo entre ataques
+    public float timeBetweenAttacks = 2f;
     private bool canAttack = true;
     private Transform player;
 
     [Header("Ataque Final - Rayos del Cielo")]
-    public GameObject lightningWarningPrefab;   // Prefab de la sombra o marca de impacto
-    public GameObject lightningStrikePrefab;    // Prefab del rayo real
-    public int lightningCount = 10;             // Cantidad de rayos
-    public float lightningDelay = 0.8f;         // Tiempo entre cada rayo
-    public float warningTime = 1f;              // Tiempo que la sombra dura antes de caer
-    public float lightningAreaWidth = 16f;      // Ancho del mapa donde pueden caer los rayos
-    public float lightningYSpawn = 10f;         // Altura desde donde caen
+    public GameObject lightningWarningPrefab;
+    public GameObject lightningStrikePrefab;
+    public int lightningCount = 10;
+    public float lightningDelay = 0.8f;
+    public float warningTime = 1f;
+    public float lightningAreaWidth = 16f;
+    public float lightningYSpawn = 10f;
+
+    [Header("Animación del jefe")]
+    public Animator animator;
 
     void Start()
     {
         Life = 100;
         target = EndPoint;
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        if (Life <= 50)
-        {
-            timeBetweenAttacks = 1.5f;
-            MoveSpeed = 3f;
-        }
-        else if (Life <= 30)
-        {
-            timeBetweenAttacks = 1f;
-            MoveSpeed = 3.5f;
-        }
-            if (healthBar != null)
-                healthBar.SetMaxHealth(Life);
-       
+        if (healthBar != null)
+            healthBar.SetMaxHealth(Life);
     }
+
     void Update()
     {
         if (canMove)
@@ -58,9 +51,6 @@ public class TheWatcher : Boss
             StartCoroutine(AttackPattern());
     }
 
-    // -------------------------------
-    // MOVIMIENTO ENTRE PUNTOS
-    // -------------------------------
     public void Movement()
     {
         if (StartPoint == null || EndPoint == null) return;
@@ -74,30 +64,25 @@ public class TheWatcher : Boss
         if (Vector2.Distance(transform.position, target.position) < 0.1f)
         {
             target = (target == EndPoint) ? StartPoint : EndPoint;
-
             Vector3 scale = transform.localScale;
             scale.x = (target == EndPoint) ? Mathf.Abs(scale.x) : -Mathf.Abs(scale.x);
             transform.localScale = scale;
         }
     }
 
-    // -------------------------------
-    // CONTROL DE ATAQUES
-    // -------------------------------
     IEnumerator AttackPattern()
     {
         canAttack = false;
 
-        // 🔥 Si está en fase final, tiene chance de usar el nuevo ataque
         if (Life <= 30)
         {
-            int specialChance = Random.Range(0, 4); // 1 de 4 chance de hacer el ataque especial
+            int specialChance = Random.Range(0, 4);
             if (specialChance == 0)
             {
                 yield return StartCoroutine(FinalLightningStorm());
                 yield return new WaitForSeconds(timeBetweenAttacks);
                 canAttack = true;
-                yield break; // corta aquí para no ejecutar los ataques normales
+                yield break;
             }
         }
 
@@ -119,66 +104,15 @@ public class TheWatcher : Boss
         yield return new WaitForSeconds(timeBetweenAttacks);
         canAttack = true;
     }
-    // -------------------------------
-    // ATAQUE FINAL: TORMENTA DE RAYOS
-    // -------------------------------
-    IEnumerator FinalLightningStorm()
-    {
-        Debug.Log("⚡ The Watcher desata la tormenta final");
 
-        canMove = false;
-
-        // Teletransportarse a un extremo del mapa
-        Transform teleportTarget = (Random.value < 0.5f) ? StartPoint : EndPoint;
-        transform.position = teleportTarget.position;
-        yield return new WaitForSeconds(0.3f);
-
-        // ⚠️ Invoca rayos aleatorios con advertencia visual
-        for (int i = 0; i < lightningCount; i++)
-        {
-            // Posición horizontal aleatoria dentro del rango del mapa
-            float randomX = Random.Range(-lightningAreaWidth / 2f, lightningAreaWidth / 2f);
-            Vector2 groundPos = new Vector2(randomX, -3.91f); // base del impacto
-            Vector2 spawnPos = new Vector2(randomX, -3.91f + lightningYSpawn);
-
-            // Instancia la sombra (advertencia)
-            GameObject warning = Instantiate(lightningWarningPrefab, groundPos, Quaternion.identity);
-            Destroy(warning, warningTime + 0.5f);
-
-            // Espera el tiempo de advertencia y luego lanza el rayo
-            StartCoroutine(SpawnLightningAfterDelay(spawnPos, warningTime));
-
-            yield return new WaitForSeconds(lightningDelay); // tiempo entre rayos
-        }
-
-        yield return new WaitForSeconds(1f);
-        canMove = true;
-    }
-
-    // -------------------------------
-    // Subcorrutina auxiliar: lanza el rayo tras advertencia
-    // -------------------------------
-    IEnumerator SpawnLightningAfterDelay(Vector2 spawnPos, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        GameObject lightning = Instantiate(lightningStrikePrefab, spawnPos, Quaternion.identity);
-        Rigidbody2D rb = lightning.GetComponent<Rigidbody2D>();
-        if (rb != null) rb.velocity = Vector2.down * 15f; // velocidad de caída
-
-        Destroy(lightning, 2f); // se destruye tras impactar
-    }
-
-
-    // -------------------------------
-    // ATAQUE 1: EXPLOSIÓN RADIAL
-    // -------------------------------
     IEnumerator ExplosionAttack()
     {
         Debug.Log("💥 Explosion radial");
         canMove = false;
-        transform.position = centerPoint.position;
 
-        yield return new WaitForSeconds(0.2f); // pequeña carga visual
+        animator.SetTrigger("Trigger_Explosion");
+        transform.position = centerPoint.position;
+        yield return new WaitForSeconds(0.3f);
 
         int numProjectiles = 20;
         float angleStep = 360f / numProjectiles;
@@ -188,36 +122,23 @@ public class TheWatcher : Boss
         {
             float angle = i * angleStep * Mathf.Deg2Rad;
             Vector2 dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
-
             GameObject proj = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
             Rigidbody2D rb = proj.GetComponent<Rigidbody2D>();
             if (rb != null) rb.velocity = dir * shootForce;
-
-            float rotZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            proj.transform.rotation = Quaternion.Euler(0, 0, rotZ);
+            proj.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
         }
 
-        yield return new WaitForSeconds(0.5f); // tiempo de quedarse quieto
-
-        // Teletransporte rápido
-        Transform teleportTarget = (Random.value < 0.5f) ? StartPoint : EndPoint;
-        transform.position = teleportTarget.position;
-
-        Debug.Log("✨ Teleport rápido al borde");
-
-        yield return new WaitForSeconds(0.3f); // breve pausa antes de volver a moverse
+        yield return new WaitForSeconds(0.6f);
         canMove = true;
     }
 
-    // -------------------------------
-    // ATAQUE 2: DISPARO DE LOS OJOS (puede moverse)
-    // -------------------------------
     IEnumerator FireEyesAttack()
     {
         Debug.Log("👁️ Disparo en movimiento");
+        animator.SetTrigger("Trigger_FireEyes");
 
-        int burstCount = 3;          // número de ráfagas
-        float burstDelay = 0.25f;    // tiempo entre ráfagas
+        int burstCount = 3;
+        float burstDelay = 0.25f;
         float projectileSpeed = 8f;
 
         for (int b = 0; b < burstCount; b++)
@@ -226,29 +147,20 @@ public class TheWatcher : Boss
             {
                 GameObject proj = Instantiate(projectilePrefab, firePoints[i].position, Quaternion.identity);
                 Vector2 dir = (player.position - firePoints[i].position).normalized;
-
-                // Pequeña variación para patrón más natural
                 dir = Quaternion.Euler(0, 0, Random.Range(-4f, 4f)) * dir;
-
                 Rigidbody2D rb = proj.GetComponent<Rigidbody2D>();
                 if (rb != null) rb.velocity = dir * projectileSpeed;
-
-                float rotZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                proj.transform.rotation = Quaternion.Euler(0, 0, rotZ);
+                proj.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
             }
-
             yield return new WaitForSeconds(burstDelay);
         }
     }
 
-    // -------------------------------
-    // ATAQUE 3: LÁSER DIRECCIONAL
-    // -------------------------------
     IEnumerator LaserAttack()
     {
         Debug.Log("🔫 The Watcher prepara ataque de láser");
-
         canMove = false;
+        animator.SetTrigger("Trigger_Laser");
 
         Transform attackPoint = (Random.value < 0.5f) ? StartPoint : EndPoint;
         transform.position = attackPoint.position;
@@ -257,23 +169,57 @@ public class TheWatcher : Boss
         scale.x = (player.position.x > transform.position.x) ? Mathf.Abs(scale.x) : -Mathf.Abs(scale.x);
         transform.localScale = scale;
 
-        yield return new WaitForSeconds(0.2f); // pequeña carga
+        yield return new WaitForSeconds(0.3f);
 
         Vector2 dir = (player.position - transform.position).normalized;
         GameObject laser = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
         Rigidbody2D rb = laser.GetComponent<Rigidbody2D>();
         if (rb != null) rb.velocity = dir * 9f;
+        laser.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
 
-        float rotZ = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        laser.transform.rotation = Quaternion.Euler(0, 0, rotZ);
-
-        yield return new WaitForSeconds(0.6f); // menos tiempo quieto
+        yield return new WaitForSeconds(0.6f);
         canMove = true;
+    }
+
+    IEnumerator FinalLightningStorm()
+    {
+        Debug.Log("⚡ The Watcher desata la tormenta final");
+        canMove = false;
+        animator.SetTrigger("Trigger_Storm");
+
+        Transform teleportTarget = (Random.value < 0.5f) ? StartPoint : EndPoint;
+        transform.position = teleportTarget.position;
+        yield return new WaitForSeconds(0.5f);
+
+        for (int i = 0; i < lightningCount; i++)
+        {
+            float randomX = Random.Range(-lightningAreaWidth / 2f, lightningAreaWidth / 2f);
+            Vector2 groundPos = new Vector2(randomX, -3.91f);
+            Vector2 spawnPos = new Vector2(randomX, -3.91f + lightningYSpawn);
+            GameObject warning = Instantiate(lightningWarningPrefab, groundPos, Quaternion.identity);
+            Destroy(warning, warningTime + 0.5f);
+            StartCoroutine(SpawnLightningAfterDelay(spawnPos, warningTime));
+            yield return new WaitForSeconds(lightningDelay);
+        }
+
+        yield return new WaitForSeconds(1f);
+        canMove = true;
+    }
+
+    IEnumerator SpawnLightningAfterDelay(Vector2 spawnPos, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        GameObject lightning = Instantiate(lightningStrikePrefab, spawnPos, Quaternion.identity);
+        Rigidbody2D rb = lightning.GetComponent<Rigidbody2D>();
+        if (rb != null) rb.velocity = Vector2.down * 15f;
+        Destroy(lightning, 2f);
     }
 
     protected override void Die()
     {
-        Debug.Log("💀 The Watcher ha sido derrotado. Se abre la puerta dimensional...");
+        Debug.Log("💀 The Watcher ha sido derrotado.");
+        if (animator != null)
+            animator.SetTrigger("Trigger_Death");
         base.Die();
     }
 }
