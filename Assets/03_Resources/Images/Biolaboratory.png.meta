@@ -1,0 +1,2389 @@
+fileFormatVersion: 2
+guid: 8da16c6a9fb8c584388aba66b5c01b4c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1945233821023590510
+    second: Biolaboratory_0
+  - first:
+      213: -446408024640478953
+    second: Biolaboratory_1
+  - first:
+      213: -1882280798722420542
+    second: Biolaboratory_2
+  - first:
+      213: 8197985178924590686
+    second: Biolaboratory_3
+  - first:
+      213: 1313549742018177662
+    second: Biolaboratory_4
+  - first:
+      213: -1308810549036908800
+    second: Biolaboratory_5
+  - first:
+      213: 3689023639885933754
+    second: Biolaboratory_6
+  - first:
+      213: -3619525463467420772
+    second: Biolaboratory_7
+  - first:
+      213: -8480274056843941372
+    second: Biolaboratory_8
+  - first:
+      213: -1905597652778038935
+    second: Biolaboratory_9
+  - first:
+      213: -144056436593706812
+    second: Biolaboratory_10
+  - first:
+      213: -3085683131893993976
+    second: Biolaboratory_11
+  - first:
+      213: -1603950543009058335
+    second: Biolaboratory_12
+  - first:
+      213: 2747342529145367032
+    second: Biolaboratory_13
+  - first:
+      213: 1296303838263766689
+    second: Biolaboratory_14
+  - first:
+      213: -778463441475064290
+    second: Biolaboratory_15
+  - first:
+      213: -2200388124193464262
+    second: Biolaboratory_16
+  - first:
+      213: -2101050560349796521
+    second: Biolaboratory_17
+  - first:
+      213: 474279784802031268
+    second: Biolaboratory_18
+  - first:
+      213: 5775044510913341447
+    second: Biolaboratory_19
+  - first:
+      213: -7447518988122065725
+    second: Biolaboratory_20
+  - first:
+      213: -5371319193187924650
+    second: Biolaboratory_21
+  - first:
+      213: 6009655780928201403
+    second: Biolaboratory_22
+  - first:
+      213: -5112751570559287819
+    second: Biolaboratory_23
+  - first:
+      213: 5577076713825683827
+    second: Biolaboratory_24
+  - first:
+      213: 6789225394730619885
+    second: Biolaboratory_25
+  - first:
+      213: -4945842675330984107
+    second: Biolaboratory_26
+  - first:
+      213: 4198526517491632877
+    second: Biolaboratory_27
+  - first:
+      213: -2869202178173695516
+    second: Biolaboratory_28
+  - first:
+      213: -1669666815529130934
+    second: Biolaboratory_29
+  - first:
+      213: 5534137072372444726
+    second: Biolaboratory_30
+  - first:
+      213: -7489715228741913927
+    second: Biolaboratory_31
+  - first:
+      213: 3506917999654063486
+    second: Biolaboratory_32
+  - first:
+      213: -3254465929753429901
+    second: Biolaboratory_33
+  - first:
+      213: 4588046520124677176
+    second: Biolaboratory_34
+  - first:
+      213: -3661926957089052625
+    second: Biolaboratory_35
+  - first:
+      213: -6902903781705265884
+    second: Biolaboratory_36
+  - first:
+      213: 853183045004009166
+    second: Biolaboratory_37
+  - first:
+      213: -1835746267211623559
+    second: Biolaboratory_38
+  - first:
+      213: -4507801379700834927
+    second: Biolaboratory_39
+  - first:
+      213: 4907087382796440083
+    second: Biolaboratory_40
+  - first:
+      213: 2043317510663914284
+    second: Biolaboratory_41
+  - first:
+      213: -6040316935798779313
+    second: Biolaboratory_42
+  - first:
+      213: 1825697917718644335
+    second: Biolaboratory_43
+  - first:
+      213: -5988403511444548355
+    second: Biolaboratory_44
+  - first:
+      213: 6587503020204246636
+    second: Biolaboratory_45
+  - first:
+      213: -5686445397755669736
+    second: Biolaboratory_46
+  - first:
+      213: -6217353835503319929
+    second: Biolaboratory_47
+  - first:
+      213: 6229135095729991503
+    second: Biolaboratory_48
+  - first:
+      213: 1201220302486955748
+    second: Biolaboratory_49
+  - first:
+      213: -1680327334092691834
+    second: Biolaboratory_50
+  - first:
+      213: 8624848149450982493
+    second: Biolaboratory_51
+  - first:
+      213: -8733151664048376623
+    second: Biolaboratory_52
+  - first:
+      213: 202885103671641274
+    second: Biolaboratory_53
+  - first:
+      213: 627815697661665164
+    second: Biolaboratory_54
+  - first:
+      213: 3775707215990930744
+    second: Biolaboratory_55
+  - first:
+      213: -280215705818788098
+    second: Biolaboratory_56
+  - first:
+      213: -394427649246555948
+    second: Biolaboratory_57
+  - first:
+      213: -8907885018283569359
+    second: Biolaboratory_58
+  - first:
+      213: -3665699269105865327
+    second: Biolaboratory_59
+  - first:
+      213: -6479910537374067114
+    second: Biolaboratory_60
+  - first:
+      213: -4156494365443995734
+    second: Biolaboratory_61
+  - first:
+      213: 4764248403640292145
+    second: Biolaboratory_62
+  - first:
+      213: 4488299066392700133
+    second: Biolaboratory_63
+  - first:
+      213: -4091689356104575525
+    second: Biolaboratory_64
+  - first:
+      213: -8144925674148211240
+    second: Biolaboratory_65
+  - first:
+      213: 7759749245231269701
+    second: Biolaboratory_66
+  - first:
+      213: 5970167634832126008
+    second: Biolaboratory_67
+  - first:
+      213: 885085583707152503
+    second: Biolaboratory_68
+  - first:
+      213: 6878231116037025513
+    second: Biolaboratory_69
+  - first:
+      213: -8843244352800875572
+    second: Biolaboratory_70
+  - first:
+      213: -3379942489614420507
+    second: Biolaboratory_71
+  - first:
+      213: 3420116858831809428
+    second: Biolaboratory_72
+  - first:
+      213: 9082535989406113714
+    second: Biolaboratory_73
+  - first:
+      213: 6873906755820729651
+    second: Biolaboratory_74
+  - first:
+      213: -866828767359518832
+    second: Biolaboratory_75
+  - first:
+      213: -4289151766909289465
+    second: Biolaboratory_76
+  - first:
+      213: -48861362170252526
+    second: Biolaboratory_77
+  - first:
+      213: 142958368693819253
+    second: Biolaboratory_78
+  - first:
+      213: -1242527226093413133
+    second: Biolaboratory_79
+  - first:
+      213: 2347798792571695547
+    second: Biolaboratory_80
+  - first:
+      213: -999696406458397322
+    second: Biolaboratory_81
+  - first:
+      213: 8729593244980875383
+    second: Biolaboratory_82
+  - first:
+      213: -5391538398489627227
+    second: Biolaboratory_83
+  - first:
+      213: -7941326580775878412
+    second: Biolaboratory_84
+  - first:
+      213: -9184817888269531999
+    second: Biolaboratory_85
+  - first:
+      213: -1802411290110328480
+    second: Biolaboratory_86
+  - first:
+      213: -3923036703511925813
+    second: Biolaboratory_87
+  - first:
+      213: -3199001632302328174
+    second: Biolaboratory_88
+  - first:
+      213: -5037530857088188760
+    second: Biolaboratory_89
+  - first:
+      213: -8755757327267247747
+    second: Biolaboratory_90
+  - first:
+      213: 7078679277928626925
+    second: Biolaboratory_91
+  - first:
+      213: -7573352484168790317
+    second: Biolaboratory_92
+  - first:
+      213: -7645093131908003566
+    second: Biolaboratory_93
+  - first:
+      213: 6466176778806113112
+    second: Biolaboratory_94
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 49
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Biolaboratory_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68df2b9adbdefa10800000000000000
+      internalID: 1945233821023590510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711ab6a444a0ec9f0800000000000000
+      internalID: -446408024640478953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_2
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c09c98169bc0e5e0800000000000000
+      internalID: -1882280798722420542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_3
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56a7bfd51815c170800000000000000
+      internalID: 8197985178924590686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_4
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7aacc7e78aaa3210800000000000000
+      internalID: 1313549742018177662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_5
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ffe527dbb26dde0800000000000000
+      internalID: -1308810549036908800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_6
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc6b67847b023330800000000000000
+      internalID: 3689023639885933754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_7
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c931b8e94ccd4cdc0800000000000000
+      internalID: -3619525463467420772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_8
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a2bdbfca3005a80800000000000000
+      internalID: -8480274056843941372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_9
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 969c855f705fd85e0800000000000000
+      internalID: -1905597652778038935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_10
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c839352f65300ef0800000000000000
+      internalID: -144056436593706812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_11
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e2b0a4a837d25d0800000000000000
+      internalID: -3085683131893993976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_12
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e176aeaa7f9db9e0800000000000000
+      internalID: -1603950543009058335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_13
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f968066975802620800000000000000
+      internalID: 2747342529145367032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_14
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aeefa809756df110800000000000000
+      internalID: 1296303838263766689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_15
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e204cdf975235f0800000000000000
+      internalID: -778463441475064290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_16
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30e571c8a6a671e0800000000000000
+      internalID: -2200388124193464262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_17
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757073fa5a197d2e0800000000000000
+      internalID: -2101050560349796521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_18
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 231
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a6164193faf49600800000000000000
+      internalID: 474279784802031268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7082f0b9264152050800000000000000
+      internalID: 5775044510913341447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_20
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4f10f50f815a890800000000000000
+      internalID: -7447518988122065725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_21
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655cbcaf6ad3575b0800000000000000
+      internalID: -5371319193187924650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_22
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb2299c9716966350800000000000000
+      internalID: 6009655780928201403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_23
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd3efbf88bdb09b0800000000000000
+      internalID: -5112751570559287819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_24
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379ceacf8b1c56d40800000000000000
+      internalID: 5577076713825683827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_25
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3daf0968c283e50800000000000000
+      internalID: 6789225394730619885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_26
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557dded7a46dc5bb0800000000000000
+      internalID: -4945842675330984107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_27
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea85277f99244a30800000000000000
+      internalID: 4198526517491632877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_28
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e90e2512db8e28d0800000000000000
+      internalID: -2869202178173695516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_29
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44e027a0e624d8e0800000000000000
+      internalID: -1669666815529130934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_30
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e6411a8543dcc40800000000000000
+      internalID: 5534137072372444726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_31
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b231028eaf2f0890800000000000000
+      internalID: -7489715228741913927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_32
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7dcdc917531ba030800000000000000
+      internalID: 3506917999654063486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_33
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3787f63da70d5d2d0800000000000000
+      internalID: -3254465929753429901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_34
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c9ff460040caf30800000000000000
+      internalID: 4588046520124677176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_35
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28a74195d83e2dc0800000000000000
+      internalID: -3661926957089052625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_36
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42dc1cc6595f330a0800000000000000
+      internalID: -6902903781705265884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_37
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 176
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece99d5857d17db00800000000000000
+      internalID: 853183045004009166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9731a150f7e1686e0800000000000000
+      internalID: -1835746267211623559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_39
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d7aec47821171c0800000000000000
+      internalID: -4507801379700834927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_40
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 312126dc9f9791440800000000000000
+      internalID: 4907087382796440083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_41
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23457233725b5c10800000000000000
+      internalID: 2043317510663914284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_42
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4210f6ffbb7c2ca0800000000000000
+      internalID: -6040316935798779313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_43
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f664acc459e265910800000000000000
+      internalID: 1825697917718644335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_44
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df455a8fbbae4eca0800000000000000
+      internalID: -5988403511444548355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_45
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c66461448138b6b50800000000000000
+      internalID: 6587503020204246636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_46
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8135e10f900b511b0800000000000000
+      internalID: -5686445397755669736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_47
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78489e7a0a587b9a0800000000000000
+      internalID: -6217353835503319929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_48
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4fa7eebd55527650800000000000000
+      internalID: 6229135095729991503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_49
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6e8b230879ba010800000000000000
+      internalID: 1201220302486955748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_50
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686a60141374ea8e0800000000000000
+      internalID: -1680327334092691834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_51
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5406bd02bd91b770800000000000000
+      internalID: 8624848149450982493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_52
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4f8cee4dc9dc680800000000000000
+      internalID: -8733151664048376623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_53
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab401964deac0d200800000000000000
+      internalID: 202885103671641274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_54
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f998bfc0376b800800000000000000
+      internalID: 627815697661665164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_55
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83db40955b1066430800000000000000
+      internalID: 3775707215990930744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_56
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 121
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efe8f2adc497c1cf0800000000000000
+      internalID: -280215705818788098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0111d8426b68af0800000000000000
+      internalID: -394427649246555948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_58
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f0f2995c5d06480800000000000000
+      internalID: -8907885018283569359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_59
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d298bbfe1d02dc0800000000000000
+      internalID: -3665699269105865327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_60
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6561283c2bbb216a0800000000000000
+      internalID: -6479910537374067114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_61
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa74ccc856a2156c0800000000000000
+      internalID: -4156494365443995734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_62
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13393b85ea20e1240800000000000000
+      internalID: 4764248403640292145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_63
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4ed0a8834a94e30800000000000000
+      internalID: 4488299066392700133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_64
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5d32695366737c0800000000000000
+      internalID: -4091689356104575525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_65
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5df66c04967fe80800000000000000
+      internalID: -8144925674148211240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_66
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5478d1c53da20bb60800000000000000
+      internalID: 7759749245231269701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_67
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830f3b325db4ad250800000000000000
+      internalID: 5970167634832126008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_68
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7702fa426a4784c00800000000000000
+      internalID: 885085583707152503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_69
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eeec62f1c2647f50800000000000000
+      internalID: 6878231116037025513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_70
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb13595d1c764580800000000000000
+      internalID: -8843244352800875572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_71
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e57841a6380811d0800000000000000
+      internalID: -3379942489614420507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_72
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49baefc9922b67f20800000000000000
+      internalID: 3420116858831809428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_73
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf904c6c56ab0e70800000000000000
+      internalID: 9082535989406113714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_74
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3353adf56c5056f50800000000000000
+      internalID: 6873906755820729651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_75
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 66
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 097327824d768f3f0800000000000000
+      internalID: -866828767359518832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70cf1a1613fd974c0800000000000000
+      internalID: -4289151766909289465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_77
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213b99899d8625ff0800000000000000
+      internalID: -48861362170252526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_78
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5771aaff0e3ebf100800000000000000
+      internalID: 142958368693819253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_79
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc53f03218a1cee0800000000000000
+      internalID: -1242527226093413133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_80
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb1b35b009e059020800000000000000
+      internalID: 2347798792571695547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_81
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d00d93a6d5022f0800000000000000
+      internalID: -999696406458397322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_82
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7701cb01eceb52970800000000000000
+      internalID: 8729593244980875383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_83
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5b52564686d25b0800000000000000
+      internalID: -5391538398489627227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_84
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f08c7bbc8dbac190800000000000000
+      internalID: -7941326580775878412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_85
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a48a0b3bc8f88080800000000000000
+      internalID: -9184817888269531999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_86
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06102d13b7c8cf6e0800000000000000
+      internalID: -1802411290110328480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_87
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb2a5e37e29e89c0800000000000000
+      internalID: -3923036703511925813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_88
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29699b6e6fcda93d0800000000000000
+      internalID: -3199001632302328174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_89
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae703e1068171ab0800000000000000
+      internalID: -5037530857088188760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_90
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7946b0d91d4d7680800000000000000
+      internalID: -8755757327267247747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_91
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deabadf7c458c3260800000000000000
+      internalID: 7078679277928626925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_92
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de0c4e7a0c06e690800000000000000
+      internalID: -7573352484168790317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_93
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21948dd4d4c27e590800000000000000
+      internalID: -7645093131908003566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Biolaboratory_94
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 11
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8533e9365897cb950800000000000000
+      internalID: 6466176778806113112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
