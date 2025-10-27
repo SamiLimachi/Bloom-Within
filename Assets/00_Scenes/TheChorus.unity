@@ -286,7 +286,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18187888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.225233, y: -0.9339936, z: -10}
+  m_LocalPosition: {x: -5.224468, y: -0.9339936, z: -10}
   m_LocalScale: {x: 0.5, y: 0.7, z: 1}
   m_Children:
   - {fileID: 271045667}
@@ -414,6 +414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 131439171}
   - component: {fileID: 131439170}
+  - component: {fileID: 131439173}
   - component: {fileID: 131439169}
   - component: {fileID: 131439168}
   - component: {fileID: 131439167}
@@ -552,8 +553,8 @@ MonoBehaviour:
   life: 5
   BossFight: 1
   startPoint: {fileID: 1359292816}
-  isDashUnlocked: 0
-  dashDistance: 3
+  isDashUnlocked: 1
+  dashDistance: 7
   dashCooldown: 1
   DashEffect: {fileID: 6907550027692716151, guid: 90e3bb95fa95bb149bddd0d692e892aa, type: 3}
   dashSound: {fileID: 0}
@@ -604,6 +605,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &131439173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131439166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b51d6806fe17dd4182ab6ec5e9e7eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &203030949
 GameObject:
   m_ObjectHideFlags: 0
@@ -6392,9 +6405,9 @@ GameObject:
   - component: {fileID: 481270649}
   - component: {fileID: 481270648}
   - component: {fileID: 481270647}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: TheChorus
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6443,7 +6456,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2.5
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -6522,10 +6535,11 @@ MonoBehaviour:
   contactDamage: 1
   knockbackForce: 6
   contactCooldown: 1.5
-  bodyProjectilePrefab: {fileID: 4890661617071709377, guid: 4900dc02548a3f34ca225ff5a71553e5, type: 3}
+  bodyProjectilePrefab: {fileID: 1137782216782941988, guid: 363d3fd1ed5aa1f4cbd2a8543282367b, type: 3}
   shootPoint: {fileID: 1277645755}
-  debrisPrefab: {fileID: 4890661617071709377, guid: 4900dc02548a3f34ca225ff5a71553e5, type: 3}
-  roarWavePrefab: {fileID: 4890661617071709377, guid: 4900dc02548a3f34ca225ff5a71553e5, type: 3}
+  debrisPrefab: {fileID: 643771913952243241, guid: e540651967d0afa47bfdddb3593af031, type: 3}
+  roarWavePrefab: {fileID: 3194254339234916924, guid: 055b83abe455cc948a1b67516be59afd, type: 3}
+  impactEffect: {fileID: 0}
   timeBetweenAttacks: 2
   groundCheck: {fileID: 591491629}
   groundLayer:
@@ -6539,8 +6553,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481270646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.5, y: -2.1, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: 14.9732, y: -1.1592, z: 0}
+  m_LocalScale: {x: 1.9464, y: 5.3332515, z: 1}
   m_Children:
   - {fileID: 1277645755}
   - {fileID: 591491629}
@@ -6878,7 +6892,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4798346, y: 0.3212664, z: -10}
+  m_LocalPosition: {x: 2.4875374, y: 0.3212664, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6991,7 +7005,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548184806}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -8899,7 +8913,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717531984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.21, y: 0.28, z: 0}
+  m_LocalPosition: {x: 11.21, y: 14.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1718855330}
@@ -8931,7 +8945,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718855329}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.96, y: 1.29, z: 0}
+  m_LocalPosition: {x: 1.96, y: -13.39, z: 0}
   m_LocalScale: {x: 9.978424, y: 5.0311475, z: 1}
   m_Children: []
   m_Father: {fileID: 1717531986}

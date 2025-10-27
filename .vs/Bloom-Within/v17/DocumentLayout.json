@@ -1,73 +1,89 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\BloomWithin\\Bloom-Within\\",
+  "WorkspaceRootPath": "D:\\Bloom-Within\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|d:\\bloomwithin\\bloom-within\\assets\\01_scripts\\thechorus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\bodyprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\bodyprojectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\thechorus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\thechorus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|d:\\bloomwithin\\bloom-within\\assets\\01_scripts\\thewatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\thewatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\playerattackarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\playerattackarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\key.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\key.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\playerinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\playerinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\boss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\firespitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\thewatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\thewatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\fallingdebris1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\fallingdebris1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|d:\\bloom-within\\assets\\01_scripts\\stunreceiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\stunreceiver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|d:\\bloom-within\\assets\\01_scripts\\roarwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\roarwave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\playerattackarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\playerattackarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\door.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\key.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\key.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\playerinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\playerinventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\firespitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\firespitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\lightningstrike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\lightningstrike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\lightningstrike.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\warningpulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\warningpulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\warningpulse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\projectile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\uiaudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\uiaudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\uiaudiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\menucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\startpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\startpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\startpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\lightning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\lightning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\lightning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\BloomWithin\\Bloom-Within\\assets\\01_scripts\\electricline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|D:\\Bloom-Within\\assets\\01_scripts\\electricline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{867CA891-A906-98C6-3AD7-4DDA975F77CF}|Assembly-CSharp.csproj|solutionrelative:assets\\01_scripts\\electricline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -78,40 +94,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 293,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "StunReceiver.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\StunReceiver.cs",
+              "RelativeDocumentMoniker": "Assets\\01_Scripts\\StunReceiver.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\StunReceiver.cs",
+              "RelativeToolTip": "Assets\\01_Scripts\\StunReceiver.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAwwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T13:28:59.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RoarWave.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\RoarWave.cs",
+              "RelativeDocumentMoniker": "Assets\\01_Scripts\\RoarWave.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\RoarWave.cs",
+              "RelativeToolTip": "Assets\\01_Scripts\\RoarWave.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T13:28:21.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FallingDebris1.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\FallingDebris1.cs",
+              "RelativeDocumentMoniker": "Assets\\01_Scripts\\FallingDebris1.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\FallingDebris1.cs",
+              "RelativeToolTip": "Assets\\01_Scripts\\FallingDebris1.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAwwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T13:25:09.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "TheChorus.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\TheChorus.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\TheChorus.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\TheChorus.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\TheChorus.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\TheChorus.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\TheChorus.cs",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAwwLIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAwwMoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-26T21:25:14.31Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PlayerInventory.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\PlayerInventory.cs",
-              "RelativeDocumentMoniker": "Assets\\01_Scripts\\PlayerInventory.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\PlayerInventory.cs",
-              "RelativeToolTip": "Assets\\01_Scripts\\PlayerInventory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T20:46:04.765Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "Key.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Key.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\Key.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Key.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Key.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\Key.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\Key.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -119,11 +162,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "LightningStrike.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\LightningStrike.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\LightningStrike.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\LightningStrike.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\LightningStrike.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\LightningStrike.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\LightningStrike.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -131,11 +174,62 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TheWatcher.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\TheWatcher.cs",
+              "RelativeDocumentMoniker": "Assets\\01_Scripts\\TheWatcher.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\TheWatcher.cs",
+              "RelativeToolTip": "Assets\\01_Scripts\\TheWatcher.cs",
+              "ViewState": "AgIAAOcAAAAAAAAAAAAwwAEBAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T13:06:36.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Boss.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\Boss.cs",
+              "RelativeDocumentMoniker": "Assets\\01_Scripts\\Boss.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\Boss.cs",
+              "RelativeToolTip": "Assets\\01_Scripts\\Boss.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAwwCsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T13:01:47.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BodyProjectile.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\BodyProjectile.cs",
+              "RelativeDocumentMoniker": "Assets\\01_Scripts\\BodyProjectile.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\BodyProjectile.cs",
+              "RelativeToolTip": "Assets\\01_Scripts\\BodyProjectile.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-27T13:22:12.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "PlayerInventory.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\PlayerInventory.cs",
+              "RelativeDocumentMoniker": "Assets\\01_Scripts\\PlayerInventory.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\PlayerInventory.cs",
+              "RelativeToolTip": "Assets\\01_Scripts\\PlayerInventory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T20:46:04.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "WarningPulse.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\WarningPulse.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\WarningPulse.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\WarningPulse.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\WarningPulse.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\WarningPulse.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\WarningPulse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -143,11 +237,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "PlayerAttackArea.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\PlayerAttackArea.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\PlayerAttackArea.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\PlayerAttackArea.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\PlayerAttackArea.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\PlayerAttackArea.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\PlayerAttackArea.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -155,11 +249,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "Projectile.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Projectile.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\Projectile.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Projectile.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Projectile.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\Projectile.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\Projectile.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -167,36 +261,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TheWatcher.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\TheWatcher.cs",
-              "RelativeDocumentMoniker": "Assets\\01_Scripts\\TheWatcher.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\TheWatcher.cs",
-              "RelativeToolTip": "Assets\\01_Scripts\\TheWatcher.cs",
-              "ViewState": "AgIAAPkAAAAAAAAAAAAwwBUBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T13:06:36.299Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Boss.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Boss.cs",
-              "RelativeDocumentMoniker": "Assets\\01_Scripts\\Boss.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Boss.cs",
-              "RelativeToolTip": "Assets\\01_Scripts\\Boss.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T13:01:47.186Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Door.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Door.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\Door.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Door.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Door.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\Door.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\Door.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAAACEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -204,11 +273,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "Lightning.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Lightning.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\Lightning.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Lightning.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Lightning.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\Lightning.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\Lightning.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -216,11 +285,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "Player.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Player.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\Player.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\Player.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\Player.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\Player.cs",
               "ViewState": "AgIAAPkAAAAAAAAAAAAAAAMBAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -228,11 +297,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "FireSpitter.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\FireSpitter.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\FireSpitter.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\FireSpitter.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\FireSpitter.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\FireSpitter.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\FireSpitter.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -240,11 +309,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "StartPoint.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\StartPoint.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\StartPoint.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\StartPoint.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\StartPoint.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\StartPoint.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\StartPoint.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -252,11 +321,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "MenuController.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\MenuController.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\MenuController.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\MenuController.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\MenuController.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\MenuController.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\MenuController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -264,11 +333,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "UIAudioManager.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\UIAudioManager.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\UIAudioManager.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\UIAudioManager.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\UIAudioManager.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\UIAudioManager.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\UIAudioManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -276,11 +345,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "ElectricLine.cs",
-              "DocumentMoniker": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\ElectricLine.cs",
+              "DocumentMoniker": "D:\\Bloom-Within\\Assets\\01_Scripts\\ElectricLine.cs",
               "RelativeDocumentMoniker": "Assets\\01_Scripts\\ElectricLine.cs",
-              "ToolTip": "D:\\BloomWithin\\Bloom-Within\\Assets\\01_Scripts\\ElectricLine.cs",
+              "ToolTip": "D:\\Bloom-Within\\Assets\\01_Scripts\\ElectricLine.cs",
               "RelativeToolTip": "Assets\\01_Scripts\\ElectricLine.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

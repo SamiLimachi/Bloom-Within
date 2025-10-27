@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class TheChorus : Boss
@@ -13,7 +13,7 @@ public class TheChorus : Boss
     private bool canMove = true;
     private bool facingRight = true;
 
-    [Header("Da�o por contacto")]
+    [Header("Daño por contacto")]
     public int contactDamage = 1;
     public float knockbackForce = 6f;
     private bool canDealContactDamage = true;
@@ -24,6 +24,7 @@ public class TheChorus : Boss
     public Transform shootPoint;
     public GameObject debrisPrefab;
     public GameObject roarWavePrefab;
+    public GameObject impactEffect; // opcional: polvo/efecto de impacto
 
     public float timeBetweenAttacks = 2f;
 
@@ -49,7 +50,6 @@ public class TheChorus : Boss
     void MovementLogic()
     {
         float distance = Vector2.Distance(transform.position, player.position);
-
         if (distance < chaseRange)
         {
             Vector2 dir = (player.position - transform.position).normalized;
@@ -57,10 +57,6 @@ public class TheChorus : Boss
 
             if (dir.x > 0 && !facingRight) Flip();
             else if (dir.x < 0 && facingRight) Flip();
-        }
-        else
-        {
-            rb.velocity = new Vector2(0, rb.velocity.y);
         }
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
@@ -71,13 +67,13 @@ public class TheChorus : Boss
         while (Life > 0)
         {
             yield return new WaitForSeconds(timeBetweenAttacks);
-
             if (!canAttack) continue;
 
             canAttack = false;
             canMove = false;
 
-            int randomAttack = Random.Range(0, 4);
+            int randomAttack = Random.Range(0, 5); // 👈 ahora hay 5 ataques (0–4)
+
             switch (randomAttack)
             {
                 case 0:
@@ -92,11 +88,55 @@ public class TheChorus : Boss
                 case 3:
                     yield return StartCoroutine(RoarAttack());
                     break;
+                case 4:
+                    yield return StartCoroutine(LeapSmashAttack()); // ⚡ nuevo ataque
+                    break;
             }
 
             canMove = true;
             canAttack = true;
         }
+    }
+
+    // -------------------------
+    // NUEVO ATAQUE: LeapSmash
+    // -------------------------
+    IEnumerator LeapSmashAttack()
+    {
+        Debug.Log("💢 Leap Smash Attack!");
+
+        // 1️⃣ Pequeña carga antes del salto
+        rb.velocity = Vector2.zero;
+        yield return new WaitForSeconds(0.4f);
+
+        // 2️⃣ Salta directamente hacia el jugador
+        Vector2 targetDir = ((Vector2)player.position - (Vector2)transform.position).normalized;
+        Vector2 jumpVector = targetDir + Vector2.up * 1.2f; // más vertical para que no caiga plano
+        rb.velocity = jumpVector * jumpForce * 1.2f; // salto más fuerte que el normal
+
+        // 3️⃣ Esperar a que toque el suelo
+        yield return new WaitUntil(() => isGrounded);
+
+        // 4️⃣ Al caer → genera impacto / daño en área
+        Debug.Log("💥 Impacto del salto");
+        if (impactEffect != null)
+            Instantiate(impactEffect, transform.position, Quaternion.identity);
+
+        if (roarWavePrefab != null)
+            Instantiate(roarWavePrefab, transform.position, Quaternion.identity);
+
+        // daño cercano opcional
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 2f);
+        foreach (var hit in hits)
+        {
+            if (hit.CompareTag("Player"))
+            {
+                Player p = hit.GetComponent<Player>();
+                if (p != null) p.TakeDamage(1);
+            }
+        }
+
+        yield return new WaitForSeconds(0.5f);
     }
 
     IEnumerator JumpAttack()
@@ -119,7 +159,6 @@ public class TheChorus : Boss
             Rigidbody2D rbProj = proj.GetComponent<Rigidbody2D>();
             if (rbProj != null)
                 rbProj.velocity = dir * 8f;
-
             yield return new WaitForSeconds(0.15f);
         }
     }
@@ -174,5 +213,14 @@ public class TheChorus : Boss
 
         yield return new WaitForSeconds(contactCooldown);
         canDealContactDamage = true;
+    }
+    protected override void Die()
+    {
+        AudioSource bossAudio = GetComponent<AudioSource>();
+        if (bossAudio != null)
+        {
+            bossAudio.Stop();
+        }
+
     }
 }
