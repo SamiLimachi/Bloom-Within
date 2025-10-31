@@ -34,6 +34,7 @@ public class BodyProjectile : MonoBehaviour
         // Morir al tocar suelo/escena
         if (((1 << other.gameObject.layer) & groundMask) != 0)
         {
+            Debug.Log("Toco el suelo");
             Destroy(gameObject);
         }
     }

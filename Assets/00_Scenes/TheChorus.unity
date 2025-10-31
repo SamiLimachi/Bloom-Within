@@ -568,6 +568,7 @@ MonoBehaviour:
   attackArea: {fileID: 1798691558}
   attackDamage: 5
   animator: {fileID: 131439172}
+  hitsEnemy: 0
 --- !u!4 &131439171
 Transform:
   m_ObjectHideFlags: 0
@@ -6553,7 +6554,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481270646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.9732, y: -1.1592, z: 0}
+  m_LocalPosition: {x: 13.63, y: -0.11, z: 0}
   m_LocalScale: {x: 1.9464, y: 5.3332515, z: 1}
   m_Children:
   - {fileID: 1277645755}
@@ -8418,7 +8419,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1277645754}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4333334, y: 0.3333333, z: -334.52835}
+  m_LocalPosition: {x: -0.4333334, y: 0.349, z: 0}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 1}
   m_Children: []
   m_Father: {fileID: 481270651}
@@ -8945,7 +8946,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718855329}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.96, y: -13.39, z: 0}
+  m_LocalPosition: {x: 1.96, y: -12.6, z: 0}
   m_LocalScale: {x: 9.978424, y: 5.0311475, z: 1}
   m_Children: []
   m_Father: {fileID: 1717531986}

@@ -185,7 +185,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18187888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.00131, y: 14.286997, z: -10}
+  m_LocalPosition: {x: 76.00086, y: 14.286997, z: -10}
   m_LocalScale: {x: 0.5, y: 0.7, z: 1}
   m_Children:
   - {fileID: 271045667}
@@ -1015,9 +1015,12 @@ MonoBehaviour:
   isAttacking: 0
   attackDuration: 0.5
   attackSmokeEffect: {fileID: 5209490347941407554, guid: 875359b6fcc84584f965dfe3e9c075b8, type: 3}
+  attackSound: {fileID: 0}
+  damageSound: {fileID: 0}
   attackArea: {fileID: 229444723}
   attackDamage: 10
   animator: {fileID: 131439172}
+  hitsEnemy: 0
 --- !u!4 &131439171
 Transform:
   m_ObjectHideFlags: 0
@@ -12824,7 +12827,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.00364, y: 12.229073, z: -10}
+  m_LocalPosition: {x: 76.00319, y: 12.229077, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14255,6 +14258,9 @@ MonoBehaviour:
   doorID: 1
   doorClip: {fileID: 8300000, guid: ab742fbadf743cb4fb17a18834a2e1dc, type: 3}
   nextLevel: Base
+  isLokcked: 0
+  requiredKeyID: 0
+  doorLocked: {fileID: 0}
 --- !u!1 &769556253
 GameObject:
   m_ObjectHideFlags: 0
@@ -14478,18 +14484,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.008212239, y: -0.030834079}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.3, y: 2.35}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.31012714, y: 2.5108697}
   m_EdgeRadius: 0
 --- !u!212 &792730602
 SpriteRenderer:
@@ -14531,7 +14537,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: -941618045610135149, guid: 903b366f7fd38fb448f4a76b86967805, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14550,8 +14556,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792730600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.1174, y: 2.3667, z: 0}
-  m_LocalScale: {x: 1.0260537, y: 6.864365, z: 1}
+  m_LocalPosition: {x: 43.1222, y: 2.3433, z: 0}
+  m_LocalScale: {x: -5.061541, y: 2.696319, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 55
@@ -15970,6 +15976,7 @@ GameObject:
   - component: {fileID: 1091560021}
   - component: {fileID: 1091560020}
   - component: {fileID: 1091560019}
+  - component: {fileID: 1091560024}
   m_Layer: 0
   m_Name: ElectricArt
   m_TagString: Untagged
@@ -20764,8 +20771,10 @@ MonoBehaviour:
   pointA: {fileID: 90163251}
   pointB: {fileID: 102406457}
   segments: 8
-  noiseAmount: 0.05
-  noiseSpeed: 10
+  thickness: 0.2
+  oneUse: 1
+  deathSound: {fileID: 0}
+  impactEffect: {fileID: 0}
 --- !u!120 &1091560022
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -20878,6 +20887,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1091560024
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091560018}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.4836521}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 11.5, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1096104463
 GameObject:
   m_ObjectHideFlags: 0
@@ -20973,6 +21008,7 @@ GameObject:
   - component: {fileID: 1096242811}
   - component: {fileID: 1096242810}
   - component: {fileID: 1096242809}
+  - component: {fileID: 1096242813}
   m_Layer: 0
   m_Name: ElectricArt
   m_TagString: Untagged
@@ -25781,8 +25817,10 @@ MonoBehaviour:
   pointA: {fileID: 90163251}
   pointB: {fileID: 102406457}
   segments: 8
-  noiseAmount: 0.05
-  noiseSpeed: 10
+  thickness: 0.2
+  oneUse: 1
+  deathSound: {fileID: 0}
+  impactEffect: {fileID: 0}
 --- !u!120 &1096242812
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -25881,6 +25919,32 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!61 &1096242813
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096242807}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.4836521}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 11.5, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1099098972
 GameObject:
   m_ObjectHideFlags: 0
@@ -26235,7 +26299,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249534878}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0

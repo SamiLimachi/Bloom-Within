@@ -103,7 +103,7 @@ public class ElectricLine : MonoBehaviour
         if (player == null) return;
 
         // Mata instantáneamente: usa la vida actual del jugador para garantizar muerte
-        player.TakeDamage(player.life);
+        player.TakeDamage(1);
 
         // Efectos opcionales
         if (impactEffect != null)

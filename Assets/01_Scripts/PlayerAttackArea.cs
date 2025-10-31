@@ -15,6 +15,7 @@ public class PlayerAttackArea : MonoBehaviour
     {
         if (collision.CompareTag("Boss"))
         {
+            player.Heal();
             Boss boss = collision.GetComponent<Boss>();
             if (boss != null)
             {

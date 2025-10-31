@@ -38,6 +38,8 @@ public class TheWatcher : Boss
     public AudioClip ProjectileEffect;
     public AudioClip tpEffect;
 
+    public GameObject Door;
+
     void Start()
     {
         Life = 150;
@@ -265,14 +267,35 @@ public class TheWatcher : Boss
     protected override void Die()
     {
         Debug.Log("💀 The Watcher ha sido derrotado.");
-        if (animator != null)
-            animator.SetTrigger("Trigger_Death");
-        base.Die();
+
         AudioSource bossAudio = GetComponent<AudioSource>();
         if (bossAudio != null)
-        {
             bossAudio.Stop();
+
+        if (animator != null)
+            animator.SetTrigger("Trigger_Death");
+
+        // Ejecuta la coroutine que activará la puerta y luego destruirá al jefe
+        StartCoroutine(EnableDoorAfterDelay());
+    }
+
+    IEnumerator EnableDoorAfterDelay()
+    {
+        yield return new WaitForSeconds(2f); // tiempo para terminar animación de muerte
+
+        if (Door != null)
+        {
+            Door.SetActive(true);
+            Debug.Log("🚪 Puerta activada después de la muerte del jefe");
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ No se asignó ninguna puerta en el inspector");
         }
 
+        // 💥 Ahora sí destruye al jefe
+        base.Die();
     }
+
+
 }

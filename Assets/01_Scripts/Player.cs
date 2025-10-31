@@ -60,7 +60,7 @@ public class Player : MonoBehaviour
     public Animator animator;
 
 
-   
+    public int hitsEnemy=0;
 
     void Start()
     {
@@ -89,6 +89,18 @@ public class Player : MonoBehaviour
             StartCoroutine(Attack());
 
         UpdateAnimatorParameters();
+    }
+    public void Heal()
+    {
+        hitsEnemy++;
+        if (hitsEnemy >= 5)
+        {
+            if (life < 5)
+            {
+                life++;
+                hitsEnemy = 0;
+            }
+        }
     }
 
     void CheckGrounded()
@@ -229,18 +241,48 @@ public class Player : MonoBehaviour
     {
         life -= damage;
         UIAudioManager.Instance.PlaySFX(damageSound, 1f);
-        // Si la vida es mayor que 0, solo actualiza corazones
+
         if (life > 0)
         {
+            if (!BossFight)
+            {
+                transform.position = startPoint.position;
+            }
             Debug.Log($"💔 Jugador herido. Vida actual: {life}");
-            // Aquí puedes agregar un pequeño parpadeo o invulnerabilidad temporal
+            StartCoroutine(FlashDamage());
             return;
         }
 
-        // Si la vida llega a 0, entonces sí reinicia
         Debug.Log("☠️ Jugador ha muerto.");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    IEnumerator FlashDamage()
+    {
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            Color originalColor = Color.white;
+            sr.color = Color.red;
+            yield return new WaitForSeconds(0.5f);
+            sr.color = originalColor;
+        }
+    }
+    public IEnumerator Heal1()
+    {
+        if (life < 5)
+        {
+            life++;
+            SpriteRenderer sr = GetComponent<SpriteRenderer>();
+            if (sr != null)
+            {
+                Color originalColor = Color.white;
+                sr.color = Color.green;
+                yield return new WaitForSeconds(0.5f);
+                sr.color = originalColor;
+            }
+        }
+    }
+
 
 
     private IEnumerator ForceGroundDetection()
@@ -266,14 +308,21 @@ public class Player : MonoBehaviour
 
         rb.position = targetPos;
         UIAudioManager.Instance.PlaySFX(dashSound);
+
+        // 🔥 Aquí termina la parte visual del dash
         yield return new WaitForSeconds(0.1f);
+
         Instantiate(DashEffect, transform.position, transform.rotation);
         if (sr != null) sr.enabled = true;
 
+        // ✅ Ya puede moverse de nuevo
+        isDashing = false;
+
+        // ⏳ Solo el cooldown queda activo
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
-        isDashing = false;
     }
+
 
     void UpdateAnimatorParameters()
     {
