@@ -268,6 +268,9 @@ public class TheWatcher : Boss
     {
         Debug.Log("💀 The Watcher ha sido derrotado.");
 
+        canMove = false;
+        canAttack = false; // 🔒 bloquea el patrón de ataque
+
         AudioSource bossAudio = GetComponent<AudioSource>();
         if (bossAudio != null)
             bossAudio.Stop();
@@ -281,17 +284,20 @@ public class TheWatcher : Boss
 
     IEnumerator EnableDoorAfterDelay()
     {
-        yield return new WaitForSeconds(2f); // tiempo para terminar animación de muerte
+        // Espera exactamente lo que dura la animación de muerte
+        float deathAnimDuration = 2.5f; // ajusta según la duración real de tu clip
+        yield return new WaitForSeconds(deathAnimDuration);
+        //yield return new WaitForSeconds(2f); // tiempo para terminar animación de muerte
 
         if (Door != null)
         {
             Door.SetActive(true);
             Debug.Log("🚪 Puerta activada después de la muerte del jefe");
         }
-        else
-        {
-            Debug.LogWarning("⚠️ No se asignó ninguna puerta en el inspector");
-        }
+        //else
+        //{
+        //    Debug.LogWarning("⚠️ No se asignó ninguna puerta en el inspector");
+        //}
 
         // 💥 Ahora sí destruye al jefe
         base.Die();
