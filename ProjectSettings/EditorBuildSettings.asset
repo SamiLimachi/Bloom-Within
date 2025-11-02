@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/00_Scenes/Menu.unity
     guid: bf3512213413393429ecf1f6039acf83
   - enabled: 1
+    path: Assets/00_Scenes/Historia/Historia.unity
+    guid: 526538e1f4cd3ed4e824e542fd634abe
+  - enabled: 1
     path: Assets/00_Scenes/Intro.unity
     guid: fdd1f05dbbea4a0468fc812c5601fa46
   - enabled: 1

@@ -24,7 +24,7 @@ public class TheChorus : Boss
     public Transform shootPoint;
     public GameObject debrisPrefab;
     public GameObject roarWavePrefab;
-    public GameObject impactEffect; // opcional: polvo/efecto de impacto
+    public GameObject impactEffect;
 
     public float timeBetweenAttacks = 2f;
 
@@ -32,11 +32,17 @@ public class TheChorus : Boss
     public Transform groundCheck;
     public LayerMask groundLayer;
 
+    [Header("Animación")]
+    public Animator animator;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         if (healthBar != null)
             healthBar.SetMaxHealth(Life);
+
+        if (animator == null)
+            animator = GetComponent<Animator>();
 
         StartCoroutine(AttackPattern());
     }
@@ -50,13 +56,21 @@ public class TheChorus : Boss
     void MovementLogic()
     {
         float distance = Vector2.Distance(transform.position, player.position);
+
         if (distance < chaseRange)
         {
             Vector2 dir = (player.position - transform.position).normalized;
             rb.velocity = new Vector2(dir.x * moveSpeed, rb.velocity.y);
 
+            animator.SetBool("isMoving", true);
+
             if (dir.x > 0 && !facingRight) Flip();
             else if (dir.x < 0 && facingRight) Flip();
+        }
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+            animator.SetBool("isMoving", false);
         }
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
@@ -72,7 +86,7 @@ public class TheChorus : Boss
             canAttack = false;
             canMove = false;
 
-            int randomAttack = Random.Range(0, 5); // 👈 ahora hay 5 ataques (0–4)
+            int randomAttack = Random.Range(0, 5);
 
             switch (randomAttack)
             {
@@ -89,7 +103,7 @@ public class TheChorus : Boss
                     yield return StartCoroutine(RoarAttack());
                     break;
                 case 4:
-                    yield return StartCoroutine(LeapSmashAttack()); // ⚡ nuevo ataque
+                    yield return StartCoroutine(LeapSmashAttack());
                     break;
             }
 
@@ -98,34 +112,22 @@ public class TheChorus : Boss
         }
     }
 
-    // -------------------------
-    // NUEVO ATAQUE: LeapSmash
-    // -------------------------
     IEnumerator LeapSmashAttack()
     {
-        Debug.Log("💢 Leap Smash Attack!");
+        animator.SetTrigger("LeapSmash");
 
-        // 1️⃣ Pequeña carga antes del salto
         rb.velocity = Vector2.zero;
         yield return new WaitForSeconds(0.4f);
 
-        // 2️⃣ Salta directamente hacia el jugador
         Vector2 targetDir = ((Vector2)player.position - (Vector2)transform.position).normalized;
-        Vector2 jumpVector = targetDir + Vector2.up * 1.2f; // más vertical para que no caiga plano
-        rb.velocity = jumpVector * jumpForce * 1.2f; // salto más fuerte que el normal
+        Vector2 jumpVector = targetDir + Vector2.up * 1.2f;
+        rb.velocity = jumpVector * jumpForce * 1.2f;
 
-        // 3️⃣ Esperar a que toque el suelo
         yield return new WaitUntil(() => isGrounded);
 
-        // 4️⃣ Al caer → genera impacto / daño en área
-        Debug.Log("💥 Impacto del salto");
-        if (impactEffect != null)
-            Instantiate(impactEffect, transform.position, Quaternion.identity);
+        if (impactEffect) Instantiate(impactEffect, transform.position, Quaternion.identity);
+        if (roarWavePrefab) Instantiate(roarWavePrefab, transform.position, Quaternion.identity);
 
-        if (roarWavePrefab != null)
-            Instantiate(roarWavePrefab, transform.position, Quaternion.identity);
-
-        // daño cercano opcional
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 2f);
         foreach (var hit in hits)
         {
@@ -141,6 +143,8 @@ public class TheChorus : Boss
 
     IEnumerator JumpAttack()
     {
+        animator.SetTrigger("Jump");
+
         yield return new WaitForSeconds(0.2f);
         Vector2 jumpDir = ((Vector2)player.position - (Vector2)transform.position).normalized + Vector2.up * 0.5f;
         rb.velocity = jumpDir * jumpForce;
@@ -149,6 +153,7 @@ public class TheChorus : Boss
 
     IEnumerator BodyProjectileAttack()
     {
+        animator.SetTrigger("Shoot");
         yield return new WaitForSeconds(0.3f);
 
         int count = 4;
@@ -165,6 +170,8 @@ public class TheChorus : Boss
 
     IEnumerator DebrisAttack()
     {
+        animator.SetTrigger("Debris");
+
         rb.velocity = Vector2.up * (jumpForce * 1.5f);
         yield return new WaitForSeconds(0.7f);
 
@@ -180,6 +187,8 @@ public class TheChorus : Boss
 
     IEnumerator RoarAttack()
     {
+        animator.SetTrigger("Roar");
+
         yield return new WaitForSeconds(0.5f);
         Instantiate(roarWavePrefab, transform.position, Quaternion.identity);
     }
@@ -214,13 +223,15 @@ public class TheChorus : Boss
         yield return new WaitForSeconds(contactCooldown);
         canDealContactDamage = true;
     }
+
     protected override void Die()
     {
-        AudioSource bossAudio = GetComponent<AudioSource>();
-        if (bossAudio != null)
-        {
-            bossAudio.Stop();
-        }
+        canMove = false;
+        canAttack = false;
+        rb.velocity = Vector2.zero;
+        animator.SetTrigger("Die");
 
+        AudioSource bossAudio = GetComponent<AudioSource>();
+        if (bossAudio != null) bossAudio.Stop();
     }
 }
