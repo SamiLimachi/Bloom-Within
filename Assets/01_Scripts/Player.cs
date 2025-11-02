@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     public AudioClip walkingSound;
     public AudioClip jumpingSound;
     private float footstepTimer = 0f;
-    public float footstepInterval = 0.4f; // tiempo entre sonidos de pasos
+    public float footstepInterval = 0.4f;
 
     [Header("Detección de Suelo")]
     public Transform groundCheck;
@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     public Transform startPoint;
 
     [Header("Dash / Teletransporte")]
-    public bool isDashUnlocked=false;
+    public bool isDashUnlocked = false;
     public float dashDistance = 0.2f;
     public float dashCooldown = 1f;
     private bool canDash = true;
@@ -43,24 +43,30 @@ public class Player : MonoBehaviour
     private float verticalInput;
     private float originalGravity;
     private float climbStepTimer = 0f;
-    public float climbStepInterval = 0.45f; // tiempo entre sonidos al trepar
+    public float climbStepInterval = 0.45f;
 
-    [Header("Ataque")]
+    [Header("Ataque Cuerpo a Cuerpo")]
     public bool isAttacking = false;
     public float attackDuration = 0.5f;
     public GameObject attackSmokeEffect;
     public AudioClip attackSound;
     public AudioClip damageSound;
-    
-    public GameObject attackArea;/// ATAQUE 
+    public GameObject attackArea;
     public int attackDamage = 5;
 
+    [Header("Ataque a Distancia")]
+    public bool isShootUnlocked = false; // 🔓 Desbloqueable como el Dash
+    public GameObject projectilePrefab;
+    public Transform shootPoint;
+    public float projectileSpeed = 12f;
+    public float shootCooldown = 0.8f;
+    private bool canShoot = true;
+    public AudioClip shootSound;
 
     [Header("Animación")]
     public Animator animator;
 
-
-    public int hitsEnemy=0;
+    public int hitsEnemy = 0;
 
     void Start()
     {
@@ -72,7 +78,7 @@ public class Player : MonoBehaviour
     {
         if (isDashing || isAttacking) return;
 
-        CheckGrounded(); // 🔥 Actualiza canJump cada frame
+        CheckGrounded();
 
         if (isClimbing)
             Climb();
@@ -88,8 +94,13 @@ public class Player : MonoBehaviour
         if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.J)) && !isAttacking)
             StartCoroutine(Attack());
 
+        // 🔫 Disparo desbloqueable con tecla K
+        if (isShootUnlocked && Input.GetKeyDown(KeyCode.K) && canShoot)
+            StartCoroutine(ShootProjectile());
+
         UpdateAnimatorParameters();
     }
+
     public void Heal()
     {
         hitsEnemy++;
@@ -105,7 +116,6 @@ public class Player : MonoBehaviour
 
     void CheckGrounded()
     {
-        // 🔥 Detecta si hay suelo justo debajo del jugador
         canJump = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
 
         animator.SetBool("isGrounded", canJump);
@@ -118,13 +128,12 @@ public class Player : MonoBehaviour
 
     void Movement()
     {
-        float x = Input.GetAxisRaw("Horizontal"); // 🔥 RAW detecta input directo, no arrastre físico
+        float x = Input.GetAxisRaw("Horizontal");
         isRunning = Input.GetKey(KeyCode.LeftShift);
         currentSpeed = isRunning ? runningSpeed : moveSpeed;
 
         rb.velocity = new Vector2(x * currentSpeed, rb.velocity.y);
 
-        // Girar sprite según dirección
         if (x > 0.1f)
         {
             lastDirection = 1f;
@@ -136,21 +145,19 @@ public class Player : MonoBehaviour
             transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
 
-        // --- 🎧 Control de sonido de pasos ---
-        bool isMovingByInput = Mathf.Abs(x) > 0.1f; // solo si hay input real
+        bool isMovingByInput = Mathf.Abs(x) > 0.1f;
         if (isMovingByInput && canJump && !isClimbing)
         {
             footstepTimer -= Time.deltaTime;
             if (footstepTimer <= 0f)
             {
                 UIAudioManager.Instance.PlaySFX(walkingSound, 0.3f);
-
-                footstepTimer = isRunning ? footstepInterval * 0.7f : footstepInterval; // pasos más rápidos al correr
+                footstepTimer = isRunning ? footstepInterval * 0.7f : footstepInterval;
             }
         }
         else
         {
-            footstepTimer = 0f; // resetea el temporizador al quedarse quieto
+            footstepTimer = 0f;
         }
     }
 
@@ -168,55 +175,64 @@ public class Player : MonoBehaviour
 
     IEnumerator Attack()
     {
-        //isAttacking = true;
-        //animator.SetBool("isAttacking", true);
-
-        //if (attackSmokeEffect != null)
-        //    Instantiate(attackSmokeEffect, transform.position, Quaternion.identity);
-
-        //yield return new WaitForSeconds(attackDuration);
-
-        //isAttacking = false;
-        //animator.SetBool("isAttacking", false);
-
         isAttacking = true;
         animator.SetBool("isAttacking", true);
 
         if (attackSmokeEffect != null)
             Instantiate(attackSmokeEffect, transform.position, Quaternion.identity);
         UIAudioManager.Instance.PlaySFX(attackSound, 1f);
-        attackArea.SetActive(true); // 🔥 activar colisión del ataque
+        attackArea.SetActive(true);
         yield return new WaitForSeconds(attackDuration);
-        attackArea.SetActive(false); // 🔥 desactivar al terminar
+        attackArea.SetActive(false);
 
         isAttacking = false;
         animator.SetBool("isAttacking", false);
     }
 
-    
+    // 🔫 Nuevo ataque a distancia (solo si está desbloqueado)
+    IEnumerator ShootProjectile()
+    {
+        canShoot = false;
+        if (shootSound != null)
+            UIAudioManager.Instance.PlaySFX(shootSound, 1f);
+
+        if (projectilePrefab != null && shootPoint != null)
+        {
+            GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
+            Rigidbody2D prb = projectile.GetComponent<Rigidbody2D>();
+            if (prb != null)
+                prb.velocity = new Vector2(projectileSpeed * lastDirection, 0f);
+
+            // invertir sprite si mira a la izquierda
+            Vector3 scale = projectile.transform.localScale;
+            scale.x = Mathf.Abs(scale.x) * lastDirection;
+            projectile.transform.localScale = scale;
+        }
+
+        yield return new WaitForSeconds(shootCooldown);
+        canShoot = true;
+    }
 
     void Climb()
     {
-        verticalInput = Input.GetAxisRaw("Vertical"); // input directo
+        verticalInput = Input.GetAxisRaw("Vertical");
         rb.velocity = new Vector2(0, verticalInput * moveSpeed / 1.5f);
 
-        // --- 🔊 sonido de escalada ---
-        bool isClimbingByInput = Mathf.Abs(verticalInput) > 0.1f; // solo si se mueve realmente
+        bool isClimbingByInput = Mathf.Abs(verticalInput) > 0.1f;
         if (isClimbingByInput)
         {
             climbStepTimer -= Time.deltaTime;
             if (climbStepTimer <= 0f)
             {
-                UIAudioManager.Instance.PlaySFX(walkingSound, 0.3f); // 🔥 mismo clip, recortado
+                UIAudioManager.Instance.PlaySFX(walkingSound, 0.3f);
                 climbStepTimer = climbStepInterval;
             }
         }
         else
         {
-            climbStepTimer = 0f; // resetea cuando se detiene
+            climbStepTimer = 0f;
         }
     }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -256,6 +272,7 @@ public class Player : MonoBehaviour
         Debug.Log("☠️ Jugador ha muerto.");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
     IEnumerator FlashDamage()
     {
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
@@ -267,6 +284,8 @@ public class Player : MonoBehaviour
             sr.color = originalColor;
         }
     }
+
+    // 🩹 Tu método Heal1 conservado exactamente igual
     public IEnumerator Heal1()
     {
         if (life < 5)
@@ -282,8 +301,6 @@ public class Player : MonoBehaviour
             }
         }
     }
-
-
 
     private IEnumerator ForceGroundDetection()
     {
@@ -309,20 +326,15 @@ public class Player : MonoBehaviour
         rb.position = targetPos;
         UIAudioManager.Instance.PlaySFX(dashSound);
 
-        // 🔥 Aquí termina la parte visual del dash
         yield return new WaitForSeconds(0.1f);
 
         Instantiate(DashEffect, transform.position, transform.rotation);
         if (sr != null) sr.enabled = true;
 
-        // ✅ Ya puede moverse de nuevo
         isDashing = false;
-
-        // ⏳ Solo el cooldown queda activo
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
-
 
     void UpdateAnimatorParameters()
     {
@@ -345,7 +357,14 @@ public class Player : MonoBehaviour
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
         }
+
+        if (shootPoint != null)
+        {
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawLine(shootPoint.position, shootPoint.position + Vector3.right * 0.5f);
+        }
     }
+
     public void EnterDoor()
     {
         Destroy(gameObject);

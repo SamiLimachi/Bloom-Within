@@ -6,7 +6,7 @@ public class FallingDebris1 : MonoBehaviour
     public float lifeTime = 4f;
     public float knockback = 5f;
     public LayerMask groundMask;
-
+    public AudioClip impactClip;
     void Start()
     {
         Destroy(gameObject, lifeTime);
@@ -33,6 +33,7 @@ public class FallingDebris1 : MonoBehaviour
         // “Romperse” al tocar suelo/escena
         if (((1 << other.gameObject.layer) & groundMask) != 0)
         {
+            UIAudioManager.Instance.PlaySFX(impactClip, 2f);
             Destroy(gameObject);
         }
     }

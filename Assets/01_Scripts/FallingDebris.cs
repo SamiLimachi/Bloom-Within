@@ -46,7 +46,7 @@ public class FallingDebris : MonoBehaviour
 
         // 🎧 Sonido de impacto
         if (impactSound != null)
-            UIAudioManager.Instance.PlaySFX(impactSound, 0.4f);
+            UIAudioManager.Instance.PlaySFX(impactSound, 1.5f);
 
         Destroy(gameObject, 0.1f);
     }

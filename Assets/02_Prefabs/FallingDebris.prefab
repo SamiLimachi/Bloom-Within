@@ -146,4 +146,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: 5
   damage: 2
-  impactSound: {fileID: 0}
+  impactSound: {fileID: 8300000, guid: 393e918a7ffdb4547a37f3d27b93fd10, type: 3}
+  hitEffect: {fileID: 0}
