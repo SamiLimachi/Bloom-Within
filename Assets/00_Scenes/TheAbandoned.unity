@@ -286,7 +286,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18187888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.225557, y: -0.9339936, z: -10}
+  m_LocalPosition: {x: -5.223479, y: -0.9339936, z: -10}
   m_LocalScale: {x: 0.5, y: 0.7, z: 1}
   m_Children:
   - {fileID: 271045667}
@@ -6718,7 +6718,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4765744, y: 0.3212664, z: -10}
+  m_LocalPosition: {x: 2.497501, y: 0.3212664, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7019,8 +7019,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586664984}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.33, y: -0.4848, z: 0}
-  m_LocalScale: {x: 0.7247316, y: 11.115131, z: 1}
+  m_LocalPosition: {x: 25.6944, y: -0.4848, z: 0}
+  m_LocalScale: {x: 11.453442, y: 11.115131, z: 1}
   m_Children:
   - {fileID: 1868878144}
   m_Father: {fileID: 0}
@@ -8505,7 +8505,7 @@ MonoBehaviour:
   attackArea: {fileID: 1274066912}
   attackDamage: 5
   isShootUnlocked: 0
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 2213698865881521517, guid: 3341a90145fedae47bf5ad4992a70c9e, type: 3}
   shootPoint: {fileID: 0}
   projectileSpeed: 12
   shootCooldown: 0.8
@@ -8542,9 +8542,14 @@ MonoBehaviour:
   canDash: 1
   dashDistance: 3
   dashCooldown: 3
-  DashEffect: {fileID: 6907550027692716151, guid: 90e3bb95fa95bb149bddd0d692e892aa, type: 3}
+  DashEffect: {fileID: 0}
   dashSound: {fileID: 0}
-  damageSound: {fileID: 8300000, guid: c54bebeecbc77fd4d9955091e71cc7ea, type: 3}
+  projectilePrefab: {fileID: 2213698865881521517, guid: 3341a90145fedae47bf5ad4992a70c9e, type: 3}
+  projectileCount: 16
+  shootForce: 10
+  specialCooldown: 8
+  specialSound: {fileID: 0}
+  damageSound: {fileID: 0}
   groundCheck: {fileID: 1044244317}
   groundRadius: 0.2
   groundLayer:
@@ -8559,7 +8564,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331393651}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.34, y: -2.82, z: 0}
+  m_LocalPosition: {x: 5.07, y: -2.82, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 0}
   m_Children:
   - {fileID: 1044244317}
@@ -9562,8 +9567,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868878143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.16, y: -0.04833, z: 0}
-  m_LocalScale: {x: 1, y: 0.8388611, z: 1}
+  m_LocalPosition: {x: 5.7417, y: -0.04833, z: 0}
+  m_LocalScale: {x: 10.245062, y: 0.8388611, z: 1}
   m_Children: []
   m_Father: {fileID: 586664987}
   m_RootOrder: 0

@@ -11,7 +11,7 @@ public class Potion : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Player player =other.GetComponent<Player>();
-            player.Heal1();
+            player.StartCoroutine(player.Heal1());
             UIAudioManager.Instance.PlaySFX(clip, 1f);
             Destroy(gameObject);
         }

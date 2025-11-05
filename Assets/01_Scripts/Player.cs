@@ -295,7 +295,7 @@ public class Player : MonoBehaviour
             if (sr != null)
             {
                 Color originalColor = Color.white;
-                sr.color = Color.green;
+                sr.color = Color.black;
                 yield return new WaitForSeconds(0.5f);
                 sr.color = originalColor;
             }

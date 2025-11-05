@@ -31,6 +31,15 @@ public class TheMirrorPlayerBoss : Boss
     public GameObject DashEffect;
     public AudioClip dashSound;
 
+    [Header("Ataque Especial (Explosión Oscura)")]
+    public GameObject projectilePrefab;
+    public int projectileCount = 16;
+    public float shootForce = 10f;
+    public float specialCooldown = 8f;
+    private bool canSpecial = true;
+    public AudioClip specialSound;
+
+
     [Header("Vida")]
     public AudioClip damageSound;
     private bool isDashing = false;
@@ -120,10 +129,50 @@ public class TheMirrorPlayerBoss : Boss
         {
             StartCoroutine(Attack());
         }
+        else if (canSpecial && Random.value < 0.002f)
+        {
+            StartCoroutine(SpecialAttack());
+        }
+
         else if (distance > 4f && canDash)
         {
             StartCoroutine(Dash());
         }
+    }
+    IEnumerator SpecialAttack()
+    {
+        canSpecial = false;
+        isAttacking = true;
+        rb.velocity = Vector2.zero;
+
+        // Efecto visual de teletransporte
+        if (DashEffect != null)
+            Instantiate(DashEffect, transform.position, Quaternion.identity);
+
+        if (specialSound != null)
+            UIAudioManager.Instance.PlaySFX(specialSound, 1f);
+
+        yield return new WaitForSeconds(0.2f);
+
+        // Explosión circular de proyectiles
+        int count = projectileCount;
+        float angleStep = 360f / count;
+
+        for (int i = 0; i < count; i++)
+        {
+            float angle = i * angleStep * Mathf.Deg2Rad;
+            Vector2 dir = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+            GameObject proj = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            Rigidbody2D rbProj = proj.GetComponent<Rigidbody2D>();
+            if (rbProj != null)
+                rbProj.velocity = dir * shootForce;
+            proj.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg);
+        }
+
+        yield return new WaitForSeconds(1f);
+
+        isAttacking = false;
+        canSpecial = true;
     }
 
     IEnumerator Attack()
@@ -174,6 +223,9 @@ public class TheMirrorPlayerBoss : Boss
 
     void UpdateAnimator()
     {
+        bool isRunningNow = Mathf.Abs(rb.velocity.x) > 0.1f && isGrounded;
+        animator.SetBool("isRunning", isRunningNow);
+
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("yVelocity", rb.velocity.y);
 
