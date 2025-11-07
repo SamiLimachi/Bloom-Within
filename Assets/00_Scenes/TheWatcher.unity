@@ -286,7 +286,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18187888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.2253995, y: -0.9339936, z: -10}
+  m_LocalPosition: {x: -5.221196, y: -0.9339936, z: -10}
   m_LocalScale: {x: 0.5, y: 0.7, z: 1}
   m_Children:
   - {fileID: 271045667}
@@ -566,6 +566,12 @@ MonoBehaviour:
   damageSound: {fileID: 8300000, guid: bb3665398983fb44e8de5169fd52a95a, type: 3}
   attackArea: {fileID: 1798691558}
   attackDamage: 5
+  isShootUnlocked: 0
+  projectilePrefab: {fileID: 0}
+  shootPoint: {fileID: 0}
+  projectileSpeed: 12
+  shootCooldown: 0.8
+  shootSound: {fileID: 0}
   animator: {fileID: 131439172}
   hitsEnemy: 0
 --- !u!4 &131439171
@@ -6711,7 +6717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4781566, y: 0.3212664, z: -10}
+  m_LocalPosition: {x: 2.5204926, y: 0.3212664, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7894,7 +7900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f659c60f9387623438cb710bd5fe5ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Life: 30
+  Life: 5
   healthBar: {fileID: 2098794875}
   bossUI: {fileID: 1985531011}
   MoveSpeed: 10

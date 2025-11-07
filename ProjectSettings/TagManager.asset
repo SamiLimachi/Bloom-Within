@@ -9,6 +9,7 @@ TagManager:
   - Boss
   - Projectile
   - Breakable
+  - Enemy
   layers:
   - Default
   - TransparentFX
