@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/00_Scenes/TheChorus.unity
     guid: 77a01da4056a12e49a8ac16a0bc7e34e
+  - enabled: 1
+    path: Assets/00_Scenes/Base2.unity
+    guid: 9cbd439a26d69424cb97c3d41e9676c1
+  - enabled: 1
+    path: Assets/00_Scenes/TheAbandoned.unity
+    guid: 342a8646d439eb640af1e4fcc1eb6ae4
   m_configObjects: {}

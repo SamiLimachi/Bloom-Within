@@ -35,6 +35,9 @@ public class TheChorus : Boss
     [Header("Animación")]
     public Animator animator;
 
+    [Header("Puerta de salida")]
+    public GameObject Door;  // 🔹 Asigna aquí la puerta que se activará tras la muerte
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -61,7 +64,6 @@ public class TheChorus : Boss
         {
             Vector2 dir = (player.position - transform.position).normalized;
             rb.velocity = new Vector2(dir.x * moveSpeed, rb.velocity.y);
-
             animator.SetBool("isMoving", true);
 
             if (dir.x > 0 && !facingRight) Flip();
@@ -90,21 +92,11 @@ public class TheChorus : Boss
 
             switch (randomAttack)
             {
-                case 0:
-                    yield return StartCoroutine(JumpAttack());
-                    break;
-                case 1:
-                    yield return StartCoroutine(BodyProjectileAttack());
-                    break;
-                case 2:
-                    yield return StartCoroutine(DebrisAttack());
-                    break;
-                case 3:
-                    yield return StartCoroutine(RoarAttack());
-                    break;
-                case 4:
-                    yield return StartCoroutine(LeapSmashAttack());
-                    break;
+                case 0: yield return StartCoroutine(JumpAttack()); break;
+                case 1: yield return StartCoroutine(BodyProjectileAttack()); break;
+                case 2: yield return StartCoroutine(DebrisAttack()); break;
+                case 3: yield return StartCoroutine(RoarAttack()); break;
+                case 4: yield return StartCoroutine(LeapSmashAttack()); break;
             }
 
             canMove = true;
@@ -115,7 +107,6 @@ public class TheChorus : Boss
     IEnumerator LeapSmashAttack()
     {
         animator.SetTrigger("LeapSmash");
-
         rb.velocity = Vector2.zero;
         yield return new WaitForSeconds(0.4f);
 
@@ -144,8 +135,8 @@ public class TheChorus : Boss
     IEnumerator JumpAttack()
     {
         animator.SetTrigger("Jump");
-
         yield return new WaitForSeconds(0.2f);
+
         Vector2 jumpDir = ((Vector2)player.position - (Vector2)transform.position).normalized + Vector2.up * 0.5f;
         rb.velocity = jumpDir * jumpForce;
         yield return new WaitForSeconds(1f);
@@ -188,7 +179,6 @@ public class TheChorus : Boss
     IEnumerator RoarAttack()
     {
         animator.SetTrigger("Roar");
-
         yield return new WaitForSeconds(0.5f);
         Instantiate(roarWavePrefab, transform.position, Quaternion.identity);
     }
@@ -224,14 +214,32 @@ public class TheChorus : Boss
         canDealContactDamage = true;
     }
 
+    // 🔹 Muerte con puerta (igual que TheWatcher)
     protected override void Die()
     {
+        Debug.Log("💀 The Chorus ha sido derrotado.");
+
         canMove = false;
         canAttack = false;
         rb.velocity = Vector2.zero;
-        animator.SetTrigger("Die");
 
-        AudioSource bossAudio = GetComponent<AudioSource>();
-        if (bossAudio != null) bossAudio.Stop();
+        if (animator != null)
+            animator.SetTrigger("Die");
+
+        StartCoroutine(EnableDoorAfterDelay());
+    }
+
+    IEnumerator EnableDoorAfterDelay()
+    {
+        float deathAnimDuration = 2.5f; // ⏱ ajusta según tu animación real
+        yield return new WaitForSeconds(deathAnimDuration);
+
+        if (Door != null)
+        {
+            Door.SetActive(true);
+            Debug.Log("🚪 Puerta activada tras la muerte de The Chorus");
+        }
+
+        base.Die();
     }
 }
